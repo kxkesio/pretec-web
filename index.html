@@ -90,7 +90,7 @@
   .bg-light{background:var(--gray-light);}
   .services-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:40px;}
   .service-card{
-    background:#fff; border:1px solid var(--border); border-radius:10px;
+    display:block; background:#fff; border:1px solid var(--border); border-radius:10px;
     overflow:hidden; transition:transform .2s ease, box-shadow .2s ease;
   }
   .service-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px rgba(15,36,56,.08);}
@@ -123,6 +123,20 @@
     min-width:220px; height:120px;
   }
   .brands-grid img{max-height:72px; max-width:200px;}
+
+  /* Representadas en detalle */
+  .brand-row{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding:46px 0; border-top:1px solid var(--border);}
+  .brand-row:first-of-type{border-top:none; padding-top:12px;}
+  .brand-row .img-box{
+    border:1px solid var(--border); border-radius:10px; background:var(--gray-light);
+    display:flex; align-items:center; justify-content:center; padding:28px; height:280px;
+  }
+  .brand-row .img-box img{max-height:100%; max-width:100%; object-fit:contain;}
+  .brand-row-logo{height:30px; width:auto; margin-bottom:16px;}
+  .brand-row h3{font-size:23px; color:var(--navy); margin-bottom:12px;}
+  .brand-features{margin:16px 0 22px;}
+  .brand-features li{list-style:none; display:flex; gap:10px; font-size:14.5px; color:var(--ink); padding:5px 0;}
+  .brand-features li:before{content:"→"; color:var(--teal); font-weight:700;}
 
   /* Contacto */
   .contact-wrap{display:grid; grid-template-columns:1fr 1fr; gap:64px;}
@@ -159,7 +173,8 @@
     .nav-links.open{transform:translateY(0);}
     .menu-toggle{display:block;}
     .hero h1{font-size:36px;}
-    .split, .exp-block, .contact-wrap{grid-template-columns:1fr;}
+    .split, .exp-block, .contact-wrap, .brand-row{grid-template-columns:1fr;}
+    .brand-row .img-box{height:220px; order:-1;}
     .services-grid{grid-template-columns:1fr 1fr;}
     .capabilities{grid-template-columns:1fr;}
     .form-row{grid-template-columns:1fr;}
@@ -183,6 +198,7 @@
       <a href="#que-hacemos">Qué Hacemos</a>
       <a href="#equipos">Equipos &amp; Servicios</a>
       <a href="#experiencia">Experiencia</a>
+      <a href="representadas.html">Representadas</a>
       <a href="#contacto" class="nav-cta">Contáctanos</a>
     </nav>
     <button class="menu-toggle" id="menuToggle">&#9776;</button>
@@ -227,37 +243,37 @@
   <div class="container">
     <div class="eyebrow">Equipos y Servicios</div>
     <h2>La mejor tecnología para proyectos más eficientes</h2>
-    <p style="max-width:640px;">Desde la combustión hasta el control de las emisiones en la chimenea, cuidamos el ciclo completo de procesos termoenergéticos.</p>
+    <p style="max-width:640px;">Desde la generación de vapor hasta la energía libre de emisiones, cuidamos el ciclo completo de procesos termoenergéticos.</p>
 
     <div class="services-grid">
-      <div class="service-card">
+      <a class="service-card" href="representadas.html#superior-boiler">
         <img src="https://static.wixstatic.com/media/7ecf4c_c24bfd2d26ed4e598f86b03d7b8ddef9~mv2.jpg" alt="Calderas">
         <div class="body">
           <h3>Generación de Vapor de Proceso</h3>
           <p>Calderas pirotubulares, acuotubulares, de biomasa y residuos. Equipos nuevos y arriendo.</p>
         </div>
-      </div>
-      <div class="service-card">
-        <img src="https://static.wixstatic.com/media/7ecf4c_de496fb5d10b4c5ea2b3079d5d2ba39a~mv2.jpg" alt="Control de emisiones">
+      </a>
+      <a class="service-card" href="representadas.html#elcogen">
+        <img src="https://elcogen.com/wp-content/uploads/2026/03/andres-tarto-0576-elcogen.jpg" alt="Hidrógeno verde Elcogen">
         <div class="body">
-          <h3>Control de Emisiones Ambientales</h3>
-          <p>Precipitadores, filtros de mangas, ciclones, scrubbers y sistemas de desox.</p>
+          <h3>Hidrógeno Verde y Energía Libre de Emisiones</h3>
+          <p>Celdas de óxido sólido (SOFC/SOEC) para electrólisis y generación de energía sin emisiones.</p>
         </div>
-      </div>
-      <div class="service-card">
+      </a>
+      <a class="service-card" href="representadas.html#evapco">
         <img src="https://static.wixstatic.com/media/7ecf4c_0b840892aee94785b697a1ff32f013b2~mv2.jpg" alt="Torres de enfriamiento">
         <div class="body">
           <h3>Enfriamiento de Procesos</h3>
           <p>Torres de enfriamiento y sistemas dry cooling para procesos industriales.</p>
         </div>
-      </div>
-      <div class="service-card">
+      </a>
+      <a class="service-card" href="representadas.html#orthodyne">
         <img src="https://static.wixstatic.com/media/7ecf4c_c454d0bc19704a0b9aa3a862b95569b9~mv2.png" alt="Cromatografía de gases">
         <div class="body">
           <h3>Cromatografía y Análisis de Gases</h3>
           <p>Análisis y monitoreo en línea de gases de proceso.</p>
         </div>
-      </div>
+      </a>
       <div class="service-card">
         <img src="https://static.wixstatic.com/media/7ecf4c_1a6cf2be0ad744b19c2c6f7bece0c527~mv2.jpg" alt="Compresores">
         <div class="body">
@@ -265,23 +281,23 @@
           <p>Compresores para gases industriales, biogás y gas natural.</p>
         </div>
       </div>
-      <div class="service-card">
-        <img src="https://static.wixstatic.com/media/7ecf4c_fd852edeb91c4da9b42993fc3a1527b9~mv2.jpeg" alt="Auditoría energética">
+      <a class="service-card" href="representadas.html#fournier-industries">
+        <img src="https://fournierindustries.com/wp-content/uploads/2024/01/deshydratation-pressoir.jpg" alt="Secado y tratamiento de lodos">
         <div class="body">
-          <h3>Eficiencia Energética</h3>
-          <p>Auditorías termoenergéticas de plantas y procesos.</p>
+          <h3>Secado y Tratamiento de Lodos y RILes</h3>
+          <p>Prensas rotativas y de filtro para deshidratación de lodos municipales e industriales.</p>
         </div>
-      </div>
+      </a>
     </div>
 
     <ul class="capabilities">
       <li>Calderas, equipos nuevos y arriendo</li>
-      <li>Control y monitoreo medioambiental</li>
+      <li>Hidrógeno verde y celdas de combustible (SOFC/SOEC)</li>
       <li>Sistemas de combustión, quemadores</li>
       <li>Enfriamiento de procesos, torres, dry cooling</li>
       <li>Análisis, monitoreo y compresión de gases</li>
       <li>Controles e instrumentación</li>
-      <li>Auditorías de eficiencia energética</li>
+      <li>Secado y tratamiento de lodos y RILes</li>
       <li>Piezas, partes y repuestos</li>
     </ul>
   </div>
@@ -320,11 +336,11 @@
     <div class="eyebrow" style="text-align:center;">Nuestras principales representaciones</div>
     <h2 style="text-align:center;">Marcas de clase mundial</h2>
     <div class="brands-grid">
-      <a href="https://superiorboiler.com/" target="_blank"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></a>
-      <a href="https://www.orthodyne.be/es/" target="_blank"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></a>
-      <a href="http://www.evapco.com" target="_blank"><img src="https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png" alt="Evapco" style="max-height:100px; max-width:195px;"></a>
-      <a href="https://fournierindustries.com/en/" target="_blank"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></a>
-      <a href="https://elcogen.com/" target="_blank"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></a>
+      <a href="representadas.html#superior-boiler"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></a>
+      <a href="representadas.html#orthodyne"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></a>
+      <a href="representadas.html#evapco"><img src="https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png" alt="Evapco" style="max-height:100px; max-width:195px;"></a>
+      <a href="representadas.html#fournier-industries"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></a>
+      <a href="representadas.html#elcogen"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></a>
     </div>
   </div>
 </section>
@@ -383,6 +399,7 @@
           <a href="#que-hacemos">Qué Hacemos</a>
           <a href="#equipos">Equipos &amp; Servicios</a>
           <a href="#experiencia">Experiencia</a>
+          <a href="representadas.html">Representadas</a>
           <a href="#contacto">Contacto</a>
         </div>
         <div>

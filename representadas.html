@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestras Representadas | PRETEC</title>
+<style>
+  :root{
+    --navy:#0f2438;
+    --navy-2:#16324a;
+    --teal:#1fa595;
+    --teal-dark:#158577;
+    --ink:#1c2b36;
+    --gray:#5b6b76;
+    --gray-light:#f4f7f7;
+    --border:#e3e9ea;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter','Segoe UI',Arial,sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    background:var(--white);
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .container{max-width:1160px; margin:0 auto; padding:0 24px;}
+  section{padding:88px 0;}
+  h1,h2,h3{font-weight:700; letter-spacing:-0.01em;}
+  .eyebrow{
+    text-transform:uppercase; letter-spacing:.12em; font-size:13px;
+    font-weight:600; color:var(--teal-dark); margin-bottom:12px;
+  }
+  h2{font-size:34px; color:var(--navy); margin-bottom:18px;}
+  p{color:var(--gray); font-size:16px;}
+  .btn{
+    display:inline-block; padding:14px 28px; border-radius:6px;
+    font-weight:600; font-size:15px; transition:all .2s ease;
+  }
+  .btn-primary{background:var(--teal); color:#fff;}
+  .btn-primary:hover{background:var(--teal-dark);}
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50; background:rgba(15,36,56,.97);
+    backdrop-filter:blur(6px);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+  .nav-logo{display:flex; align-items:center; gap:10px;}
+  .nav-logo img{height:38px; width:auto;}
+  .nav-logo span{color:#fff; font-weight:700; font-size:19px; letter-spacing:.02em;}
+  .nav-links{display:flex; align-items:center; gap:34px;}
+  .nav-links a{color:#cfe0e6; font-size:14.5px; font-weight:500;}
+  .nav-links a:hover{color:#fff;}
+  .nav-links a.active{color:#fff;}
+  .nav-cta{background:var(--teal); color:#fff; padding:10px 20px; border-radius:6px; font-weight:600; font-size:14.5px;}
+  .nav-cta:hover{background:var(--teal-dark);}
+  .menu-toggle{display:none; color:#fff; font-size:26px; background:none; border:none; cursor:pointer;}
+
+  /* Page hero */
+  .page-hero{
+    background:linear-gradient(120deg, rgba(15,36,56,.94), rgba(15,36,56,.82)), url('https://static.wixstatic.com/media/7ecf4c_1e1dfd222db5496ba183e80c4a8baf23~mv2.jpg') center/cover;
+    color:#fff; padding:90px 0 64px;
+  }
+  .page-hero .eyebrow{color:#7fd9cd;}
+  .page-hero .breadcrumb{color:#b9cdd4; font-size:14px; margin-bottom:16px;}
+  .page-hero .breadcrumb a{color:#b9cdd4;}
+  .page-hero .breadcrumb a:hover{color:#fff;}
+  .page-hero h1{font-size:40px; max-width:720px; line-height:1.15; margin-bottom:14px;}
+  .page-hero p{color:#cfe0e6; font-size:17px; max-width:600px;}
+
+  /* Quick jump */
+  .quick-jump{background:var(--gray-light); border-bottom:1px solid var(--border);}
+  .quick-jump .container{display:flex; flex-wrap:wrap; gap:10px; padding:20px 24px;}
+  .quick-jump a{
+    font-size:13.5px; font-weight:600; color:var(--navy); background:#fff;
+    border:1px solid var(--border); border-radius:20px; padding:8px 16px;
+  }
+  .quick-jump a:hover{border-color:var(--teal); color:var(--teal-dark);}
+
+  /* Representadas en detalle */
+  .brand-row{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding:56px 0; border-top:1px solid var(--border); scroll-margin-top:90px;}
+  .brand-row:first-of-type{border-top:none; padding-top:12px;}
+  .brand-row .img-box{
+    border:1px solid var(--border); border-radius:10px; background:var(--gray-light);
+    display:flex; align-items:center; justify-content:center; padding:28px; height:300px;
+  }
+  .brand-row .img-box img{max-height:100%; max-width:100%; object-fit:contain;}
+  .brand-row-logo{height:30px; width:auto; margin-bottom:16px;}
+  .brand-row h2{font-size:26px; margin-bottom:12px;}
+  .brand-features{margin:16px 0 22px;}
+  .brand-features li{list-style:none; display:flex; gap:10px; font-size:14.5px; color:var(--ink); padding:5px 0;}
+  .brand-features li:before{content:"→"; color:var(--teal); font-weight:700;}
+  .pdf-link{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:12px 18px; border:1.5px solid var(--border); border-radius:8px;
+    font-size:14.5px; font-weight:600; color:var(--navy);
+  }
+  .pdf-link:hover{border-color:var(--teal); color:var(--teal-dark);}
+
+  /* CTA band */
+  .cta-band{background:var(--navy); color:#fff; text-align:center; padding:70px 0;}
+  .cta-band h2{color:#fff;}
+  .cta-band p{color:#b9cdd4; max-width:560px; margin:0 auto 30px;}
+
+  /* Footer */
+  footer{background:var(--navy); color:#b9cdd4; padding:50px 0 26px;}
+  .footer-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer-logo{display:flex; align-items:center; gap:10px; color:#fff; font-weight:700; font-size:18px;}
+  .footer-logo img{height:32px;}
+  .footer-cols{display:flex; gap:70px; flex-wrap:wrap;}
+  .footer-cols h4{color:#fff; font-size:14px; margin-bottom:14px;}
+  .footer-cols a{display:block; font-size:14px; margin-bottom:10px; color:#b9cdd4;}
+  .footer-cols a:hover{color:#fff;}
+  .footer-bottom{padding-top:20px; font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width: 860px){
+    section{padding:60px 0;}
+    .nav-links{position:fixed; top:70px; left:0; right:0; background:var(--navy); flex-direction:column; align-items:flex-start; padding:20px 24px; gap:18px; transform:translateY(-130%); transition:transform .25s ease; }
+    .nav-links.open{transform:translateY(0);}
+    .menu-toggle{display:block;}
+    .page-hero h1{font-size:30px;}
+    .brand-row{grid-template-columns:1fr;}
+    .brand-row .img-box{height:220px; order:-1;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="nav-logo">
+      <a href="index.html" style="display:flex; align-items:center; gap:10px;">
+        <img src="https://static.wixstatic.com/media/7ecf4c_56aa6e17863a4255be07e021bb18e43b~mv2.png" alt="Pretec">
+        <span>PRETEC</span>
+      </a>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#que-hacemos">Qué Hacemos</a>
+      <a href="index.html#equipos">Equipos &amp; Servicios</a>
+      <a href="index.html#experiencia">Experiencia</a>
+      <a href="representadas.html" class="active">Representadas</a>
+      <a href="index.html#contacto" class="nav-cta">Contáctanos</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / Representadas</div>
+    <div class="eyebrow">Nuestras representadas</div>
+    <h1>Tecnología de clase mundial para cada proceso</h1>
+    <p>Cada fabricante que representamos aporta una especialidad distinta dentro del ciclo termoenergético e industrial. Esto es lo que hace cada uno.</p>
+  </div>
+</section>
+
+<div class="quick-jump">
+  <div class="container">
+    <a href="#superior-boiler">Superior Boiler</a>
+    <a href="#elcogen">Elcogen</a>
+    <a href="#evapco">Evapco</a>
+    <a href="#orthodyne">Orthodyne</a>
+    <a href="#fournier-industries">Fournier Industries</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <div class="brand-row" id="superior-boiler">
+      <div class="img-box">
+        <img src="https://www.superiorboiler.com/app/uploads/2024/04/Dakota.png" alt="Calderas Superior Boiler">
+      </div>
+      <div>
+        <img class="brand-row-logo" src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler">
+        <h2>Superior Boiler</h2>
+        <p>Fabricante estadounidense de calderas industriales a medida, con sede en Kansas y más de un siglo de trayectoria (desde 1917). Diseña y construye cada caldera bajo pedido, priorizando piezas no propietarias que facilitan el abastecimiento de repuestos y reducen los tiempos de parada.</p>
+        <ul class="brand-features">
+          <li>Calderas pirotubulares Scotch Marine (wetback y dryback)</li>
+          <li>Calderas acuotubulares tipo D, DS, O y A, incluyendo HRSG de recuperación de calor</li>
+          <li>Calderas condensadoras serie Cheyenne y calderas verticales firetube</li>
+          <li>Paquetes modulares (skid), equipos de sala de calderas y servicio postventa</li>
+        </ul>
+        <a class="pdf-link" href="https://superiorboiler.com/" target="_blank">🔗 Visitar sitio de Superior Boiler</a>
+      </div>
+    </div>
+
+    <div class="brand-row" id="elcogen">
+      <div class="img-box">
+        <img src="https://elcogen.com/wp-content/uploads/2026/04/elcocell-product.webp" alt="Celda de óxido sólido Elcogen">
+      </div>
+      <div>
+        <img class="brand-row-logo" src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen" style="height:24px; width:auto;">
+        <h2>Elcogen</h2>
+        <p>Fabricante estonio de celdas de óxido sólido (SOFC/SOEC) de alta eficiencia, clave para la producción de hidrógeno verde y la generación de energía libre de emisiones.</p>
+        <ul class="brand-features">
+          <li>elcoCell®: celdas de óxido sólido de alta eficiencia</li>
+          <li>elcoStack®: stacks que integran más de 100 celdas</li>
+          <li>elcoModule®: módulos escalables a sistemas de clase MW</li>
+          <li>Aplicaciones en electrólisis (Power-to-X), generación gas-to-power y sector marítimo</li>
+        </ul>
+        <a class="pdf-link" href="https://elcogen.com/" target="_blank">🔗 Visitar sitio de Elcogen</a>
+      </div>
+    </div>
+
+    <div class="brand-row" id="evapco">
+      <div class="img-box">
+        <img src="https://www.evapco.com/sites/evapco.com/files/styles/primary_image_teaser_med/public/images/2019-11/At-atlas-new-sq_0.png" alt="Torre de enfriamiento Evapco Atlas">
+      </div>
+      <div>
+        <img class="brand-row-logo" src="https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png" alt="Evapco" style="height:30px; width:auto;">
+        <h2>Evapco</h2>
+        <p>Compañía estadounidense de propiedad de sus empleados y líder mundial en transferencia de calor y enfriamiento evaporativo, con manufactura y oficinas en todos los continentes.</p>
+        <ul class="brand-features">
+          <li>Torres de enfriamiento de tiro inducido y forzado (Atlas, AT, LSTE, LPT, AXS)</li>
+          <li>Enfriadores de circuito cerrado y condensadores evaporativos</li>
+          <li>Equipos para refrigeración industrial: evaporadores y recipientes a presión (RVS)</li>
+          <li>Sistemas de tratamiento de agua para torres de enfriamiento</li>
+        </ul>
+        <a class="pdf-link" href="http://www.evapco.com" target="_blank">🔗 Visitar sitio de Evapco</a>
+      </div>
+    </div>
+
+    <div class="brand-row" id="orthodyne">
+      <div class="img-box">
+        <img src="https://www.orthodyne.be/wp-content/uploads/2017/02/orthosmart-gas-chromatograph.png" alt="Cromatógrafo de gases Orthodyne">
+      </div>
+      <div>
+        <img class="brand-row-logo" src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne">
+        <h2>Orthodyne</h2>
+        <p>Fabricante belga especializado en cromatografía de gases y analizadores en línea, con más de 50 años de experiencia y distribución en más de 20 países. Sus equipos miden trazas e impurezas de gases industriales de alta pureza con precisión a nivel de partes por billón.</p>
+        <ul class="brand-features">
+          <li>Cromatógrafos de gases OrthoSmart, DID y OrthoPure (nivel ppb)</li>
+          <li>Analizadores en línea de infrarrojo, oxígeno y nitrógeno traza</li>
+          <li>Aplicaciones en plantas de separación de aire, llenado de cilindros, alimentos, gases medicinales y semiconductores</li>
+          <li>Integración de sistemas y software propio de control</li>
+        </ul>
+        <a class="pdf-link" href="https://www.orthodyne.be/es/" target="_blank">🔗 Visitar sitio de Orthodyne</a>
+      </div>
+    </div>
+
+    <div class="brand-row" id="fournier-industries">
+      <div class="img-box">
+        <img src="https://fournierindustries.com/wp-content/uploads/2024/01/deshydratation-pressoir.jpg" alt="Prensa rotativa Fournier Industries">
+      </div>
+      <div>
+        <img class="brand-row-logo" src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries" style="height:26px; width:auto;">
+        <h2>Fournier Industries</h2>
+        <p>Constructor y fabricante de equipos industriales de Quebec, Canadá, especializado en deshidratación de lodos municipales e industriales y en manejo de sólidos a granel.</p>
+        <ul class="brand-features">
+          <li>Prensa rotativa (Rotary Press): deshidratación modular, silenciosa y de bajo consumo energético</li>
+          <li>Prensa de filtro totalmente automática para lodos abrasivos o corrosivos</li>
+          <li>Sistema Polysys de dosificación de polímero y unidades móviles de arriendo</li>
+          <li>Estanques, silos, tolvas y análisis/caracterización de lodos en laboratorio propio</li>
+        </ul>
+        <a class="pdf-link" href="https://fournierindustries.com/en/" target="_blank">🔗 Visitar sitio de Fournier Industries</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2>¿Necesita equipos o repuestos de alguna de estas marcas?</h2>
+    <p>Contáctenos y le ayudamos a especificar la solución adecuada para su proceso.</p>
+    <a href="mailto:contacto@pretec.cl" class="btn btn-primary">Solicitar una cotización</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <img src="https://static.wixstatic.com/media/7ecf4c_56aa6e17863a4255be07e021bb18e43b~mv2.png" alt="Pretec">
+          PRETEC
+        </div>
+        <p style="max-width:280px; margin-top:14px; color:#b9cdd4;">Desde 2012 apoyando el desarrollo de energías limpias y sustentables.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Navegación</h4>
+          <a href="index.html#que-hacemos">Qué Hacemos</a>
+          <a href="index.html#equipos">Equipos &amp; Servicios</a>
+          <a href="index.html#experiencia">Experiencia</a>
+          <a href="representadas.html">Representadas</a>
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <a href="mailto:contacto@pretec.cl">contacto@pretec.cl</a>
+          <a href="tel:+56226811813">+56 22 681 1813</a>
+          <a href="tel:+56998715828">+56 9 9871 5828</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© PRETEC Ingeniería SpA — marca registrada.</span>
+      <span>Av. Alonso de Córdova 5870, of. 308, Las Condes, Santiago, Chile</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
