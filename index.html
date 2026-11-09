@@ -132,10 +132,10 @@ header.scrolled{background:rgba(7,26,44,.94); backdrop-filter:blur(12px); box-sh
 .center-cta{text-align:center; margin-top:48px;}
 
 /* Brands strip */
-.brands{display:grid; grid-template-columns:repeat(5,1fr); gap:18px;}
-.brands a{height:130px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center; padding:24px; transition:all .3s;}
+.brands{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px;}
+.brands a{min-width:0; overflow:hidden; height:130px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center; padding:24px; transition:all .3s;}
 .brands a:hover{transform:translateY(-5px); box-shadow:var(--shadow); border-color:var(--teal);}
-.brands img{max-height:58px; max-width:150px; width:auto;}
+.brands img{height:46px; width:auto; max-width:100%; object-fit:contain;}
 .evapco-md{height:56px; width:141px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-67px -42px; background-size:277px 127px;}
 
 /* Industrias */
@@ -231,7 +231,7 @@ header{background:rgba(7,26,44,.94);}
 .areas{grid-template-columns:1fr;}
 .sec-head h2, .about h2, .cta h2{font-size:32px;}
 .ptiles{grid-template-columns:1fr 1fr;}
-.brands{grid-template-columns:1fr 1fr;}
+.brands{grid-template-columns:repeat(2,minmax(0,1fr));}
 .contact{grid-template-columns:1fr;}
 .contact-info, form{padding:36px 26px;}
 .form-row{grid-template-columns:1fr;}
