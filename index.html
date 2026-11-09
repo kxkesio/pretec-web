@@ -121,21 +121,22 @@ header.scrolled{background:rgba(7,26,44,.94); backdrop-filter:blur(12px); box-sh
 .acard .more:before{content:""; position:absolute; inset:0; z-index:1;}
 
 /* Productos tiles */
-.ptiles{display:grid; grid-template-columns:repeat(5,1fr); gap:20px;}
+.ptiles{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
 .ptile{background:#fff; border:1px solid var(--line); border-radius:22px; padding:18px 18px 24px; transition:transform .3s, box-shadow .3s, border-color .3s; display:block;}
 .ptile:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:transparent;}
-.ptile-img{height:170px; border-radius:14px; background:linear-gradient(160deg,#f2f6f8,#e5edf2); display:flex; align-items:center; justify-content:center; padding:16px; margin-bottom:18px; overflow:hidden;}
+.ptile-img{height:200px; border-radius:14px; background:linear-gradient(160deg,#f2f6f8,#e5edf2); display:flex; align-items:center; justify-content:center; padding:16px; margin-bottom:18px; overflow:hidden;}
 .ptile-img img{max-height:100%; max-width:100%; object-fit:contain; transition:transform .4s;}
+.ptile-img img.logo-img{max-width:65%; max-height:40%;}
 .ptile:hover .ptile-img img{transform:scale(1.08);}
 .ptile h4{font-size:17px; line-height:1.25; margin-bottom:6px; padding:0 6px;}
 .ptile span{display:block; font-size:13.5px; color:var(--gray); padding:0 6px;}
 .center-cta{text-align:center; margin-top:48px;}
 
 /* Brands strip */
-.brands{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px;}
+.brands{display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:16px;}
 .brands a{min-width:0; overflow:hidden; height:130px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center; padding:24px; transition:all .3s;}
 .brands a:hover{transform:translateY(-5px); box-shadow:var(--shadow); border-color:var(--teal);}
-.brands img{height:46px; width:auto; max-width:100%; object-fit:contain;}
+.brands img{height:44px; width:auto; max-width:100%; object-fit:contain;}
 .evapco-md{height:56px; width:141px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-67px -42px; background-size:277px 127px;}
 
 /* Industrias */
@@ -209,7 +210,7 @@ html{scroll-behavior:auto;}
 }
 
 @media (max-width: 1080px){
-.ptiles{grid-template-columns:repeat(3,1fr);}
+.ptiles{grid-template-columns:repeat(2,1fr);}
 .inds{grid-template-columns:repeat(2,1fr);}
 }
 @media (max-width: 960px){
@@ -265,7 +266,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="container">
 <span class="kicker">Ingeniería y representaciones · Desde 2012</span>
 <h1>Tecnología de clase mundial para una industria más <em>eficiente y sustentable</em></h1>
-<p>Representamos a los fabricantes líderes en calderas, enfriamiento, tratamiento de lodos, análisis de gases e hidrógeno verde. Lo acompañamos desde la idea hasta la puesta en marcha.</p>
+<p>Representamos a los fabricantes líderes en calderas, enfriamiento, tratamiento de lodos, análisis de gases e hidrógeno verde y protección contra el desgaste. Lo acompañamos desde la idea hasta la puesta en marcha.</p>
 <div class="hero-actions">
 <a href="#areas" class="btn btn-primary">Descubra cómo podemos ayudarle</a>
 <a href="productos.html" class="btn btn-ghost">Ver productos</a>
@@ -274,7 +275,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="hero-stats">
 <div class="container">
 <div class="stat"><b>2012</b><span>Apoyando la energía limpia</span></div>
-<div class="stat"><b>5</b><span>Fabricantes de clase mundial</span></div>
+<div class="stat"><b>6</b><span>Fabricantes de clase mundial</span></div>
 <div class="stat"><b>3</b><span>Áreas de negocio</span></div>
 <div class="stat"><b>Chile</b><span>Soporte local, cobertura nacional</span></div>
 </div>
@@ -316,9 +317,9 @@ header{background:rgba(7,26,44,.94);}
 <article class="acard reveal">
 <div class="acard-img"><img src="https://static.wixstatic.com/media/7ecf4c_0b840892aee94785b697a1ff32f013b2~mv2.jpg" alt="Ingeniero junto a torres de enfriamiento"></div>
 <div class="acard-body">
-<h3>Energía Térmica y Procesos</h3>
+<h3>Soluciones Energéticas</h3>
 <div class="q">«Necesito generar vapor o enfriar mi proceso»</div>
-<p>Calderas, combustión y enfriamiento industrial para plantas que dependen de vapor, calor y agua de refrigeración confiables.</p>
+<p>Calderas y enfriamiento industrial para plantas que dependen de vapor, calor y agua de refrigeración confiables.</p>
 <ul>
 <li>Calderas nuevas y en arriendo</li>
 <li>Torres de enfriamiento y dry cooling</li>
@@ -328,33 +329,14 @@ header{background:rgba(7,26,44,.94);}
 <span class="bl"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></span>
 <span class="bl"><span class="evapco-sm" role="img" aria-label="Evapco"></span></span>
 </div>
-<a class="more" href="productos.html#energia-termica">Ver productos</a>
+<a class="more" href="productos.html#soluciones-energeticas">Ver productos</a>
 </div>
 </article>
 
 <article class="acard reveal d1">
-<div class="acard-img"><img src="https://fournierindustries.com/wp-content/uploads/2024/01/deshydratation-pressoir.jpg" alt="Planta de deshidratación de lodos"></div>
-<div class="acard-body">
-<h3>Medio Ambiente y Control</h3>
-<div class="q">«Necesito tratar mis residuos o medir mis gases»</div>
-<p>Soluciones para cumplir la normativa ambiental y mantener bajo control la calidad de sus procesos.</p>
-<ul>
-<li>Deshidratación de lodos y RILes</li>
-<li>Análisis de gases en línea</li>
-<li>Compresión, controles e instrumentación</li>
-</ul>
-<div class="brandline">
-<span class="bl"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></span>
-<span class="bl"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></span>
-</div>
-<a class="more" href="productos.html#medio-ambiente">Ver productos</a>
-</div>
-</article>
-
-<article class="acard reveal d2">
 <div class="acard-img"><img src="https://elcogen.com/wp-content/uploads/2026/03/andres-tarto-0576-elcogen.jpg" alt="Planta de producción de celdas de óxido sólido"></div>
 <div class="acard-body">
-<h3>Energías Limpias e Hidrógeno Verde</h3>
+<h3>Nuevas Energías e Hidrógeno</h3>
 <div class="q">«Quiero producir hidrógeno verde o energía sin emisiones»</div>
 <p>Celdas de óxido sólido para electrólisis de alta eficiencia y generación de energía sin emisiones.</p>
 <ul>
@@ -365,7 +347,27 @@ header{background:rgba(7,26,44,.94);}
 <div class="brandline">
 <span class="bl"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></span>
 </div>
-<a class="more" href="productos.html#energias-limpias">Ver productos</a>
+<a class="more" href="productos.html#nuevas-energias">Ver productos</a>
+</div>
+</article>
+
+<article class="acard reveal d2">
+<div class="acard-img"><img src="https://fournierindustries.com/wp-content/uploads/2024/01/deshydratation-pressoir.jpg" alt="Planta de deshidratación de lodos"></div>
+<div class="acard-body">
+<h3>Tecnologías de Procesos Industriales</h3>
+<div class="q">«Necesito optimizar y proteger mis procesos»</div>
+<p>Tecnologías para tratar residuos, controlar gases y alargar la vida útil de los componentes críticos de su planta.</p>
+<ul>
+<li>Deshidratación de lodos y RILes</li>
+<li>Análisis de gases en línea</li>
+<li>Protección contra el desgaste con metal duro</li>
+</ul>
+<div class="brandline">
+<span class="bl"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></span>
+<span class="bl"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></span>
+<span class="bl"><img src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></span>
+</div>
+<a class="more" href="productos.html#procesos-industriales">Ver productos</a>
 </div>
 </article>
 
@@ -389,17 +391,21 @@ header{background:rgba(7,26,44,.94);}
 <div class="ptile-img"><img src="https://www.evapco.com/sites/evapco.com/files/styles/primary_image_teaser_med/public/images/2019-11/At-atlas-new-sq_0.png" alt="Torre de enfriamiento"></div>
 <h4>Torres de enfriamiento</h4><span>Evapco</span>
 </a>
-<a class="ptile reveal d2" href="productos.html#fournier-industries">
+<a class="ptile reveal d2" href="productos.html#elcogen">
+<div class="ptile-img"><img src="assets/elcogen-2x2-module.png" alt="Módulo de celdas de óxido sólido"></div>
+<h4>Hidrógeno verde</h4><span>Elcogen</span>
+</a>
+<a class="ptile reveal" href="productos.html#fournier-industries">
 <div class="ptile-img"><img src="assets/fournier-rotary-press.png" alt="Prensa rotativa"></div>
 <h4>Deshidratación de lodos</h4><span>Fournier Industries</span>
 </a>
-<a class="ptile reveal d3" href="productos.html#orthodyne">
+<a class="ptile reveal d1" href="productos.html#orthodyne">
 <div class="ptile-img"><img src="https://www.orthodyne.be/wp-content/uploads/2017/02/orthosmart-gas-chromatograph.png" alt="Cromatógrafo de gases"></div>
 <h4>Análisis de gases</h4><span>Orthodyne</span>
 </a>
-<a class="ptile reveal d4" href="productos.html#elcogen">
-<div class="ptile-img"><img src="assets/elcogen-2x2-module.png" alt="Módulo de celdas de óxido sólido"></div>
-<h4>Hidrógeno verde</h4><span>Elcogen</span>
+<a class="ptile reveal d2" href="productos.html#durit">
+<div class="ptile-img"><img class="logo-img" src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></div>
+<h4>Metal duro antidesgaste</h4><span>DURIT</span>
 </a>
 </div>
 <div class="center-cta reveal"><a class="btn btn-dark" href="productos.html">Explorar todos los productos</a></div>
@@ -415,9 +421,10 @@ header{background:rgba(7,26,44,.94);}
 <div class="brands reveal">
 <a href="productos.html#superior-boiler"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></a>
 <a href="productos.html#evapco"><div class="evapco-md" role="img" aria-label="Evapco"></div></a>
+<a href="productos.html#elcogen"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></a>
 <a href="productos.html#fournier-industries"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></a>
 <a href="productos.html#orthodyne"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></a>
-<a href="productos.html#elcogen"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></a>
+<a href="productos.html#durit"><img src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></a>
 </div>
 </div>
 </section>
@@ -501,9 +508,9 @@ header{background:rgba(7,26,44,.94);}
 <div>
 <label for="f-area">¿En qué área necesita ayuda?</label>
 <select id="f-area" name="Área de interés">
-<option>Energía Térmica y Procesos</option>
-<option>Medio Ambiente y Control</option>
-<option>Energías Limpias e Hidrógeno Verde</option>
+<option>Soluciones Energéticas</option>
+<option>Nuevas Energías e Hidrógeno</option>
+<option>Tecnologías de Procesos Industriales</option>
 <option>Repuestos y servicio técnico</option>
 <option>Otro / no estoy seguro</option>
 </select>
