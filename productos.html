@@ -89,6 +89,8 @@ header{position:fixed; top:0; left:0; right:0; z-index:80; background:rgba(7,26,
 .prod:nth-of-type(even) .prod-visual{background:linear-gradient(160deg,#fff,#dfe9ef);}
 .prod-visual:before{content:""; position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(closest-side, rgba(23,179,160,.18), transparent);}
 .prod-visual img{position:relative; max-height:100%; max-width:100%; object-fit:contain;}
+.prod-visual.photo{padding:0; background-color:#fff; background-repeat:no-repeat; background-size:178% auto; background-position:100% 15%;}
+.prod-visual.photo:before{display:none;}
 .prod-visual img.logo-visual{width:62%; max-width:62%; height:auto; max-height:none;}
 
 .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
@@ -404,7 +406,7 @@ footer li a:hover{color:#fff;}
 <div class="by"><div class="by-logo"><img src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></div><span>Fabricante alemán · producción en Portugal</span></div><br>
 <a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Consulta%20metal%20duro%20DURIT">Consultar soluciones</a>
 </div>
-<div class="prod-visual reveal d1"><img class="logo-visual" src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT Hartmetall"></div>
+<div class="prod-visual photo reveal d1" role="img" aria-label="Cuchillas y piezas de metal duro DURIT" style="background-image:url('https://www.durit.com/fileadmin/user_upload/products/carbide/cutting-tools/en/0-cutting-tools-durit.jpg');"></div>
 </div>
 <div class="cards">
 <a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Consulta%20componentes%20para%20bombas%20y%20v%C3%A1lvulas%20-%20DURIT">
