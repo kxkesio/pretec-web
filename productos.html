@@ -94,6 +94,7 @@ header{position:fixed; top:0; left:0; right:0; z-index:80; background:rgba(7,26,
 .prod-visual img.logo-visual{width:62%; max-width:62%; height:auto; max-height:none;}
 
 .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+.cards.cards-3{grid-template-columns:repeat(3,1fr);}
 .pcard{display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:22px; padding:28px 26px 24px; transition:transform .3s, box-shadow .3s, border-color .3s;}
 .prod:nth-of-type(even) .pcard{border-color:transparent; box-shadow:0 4px 16px rgba(7,26,44,.05);}
 .pcard:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:transparent;}
@@ -179,8 +180,8 @@ footer li a:hover{color:#fff;}
 <div class="container">
 <button type="button" class="on" data-filter="todas">Todos</button>
 <button type="button" data-filter="soluciones-energeticas">Soluciones Energéticas</button>
-<button type="button" data-filter="nuevas-energias">Nuevas Energías e Hidrógeno</button>
 <button type="button" data-filter="procesos-industriales">Tecnologías de Procesos Industriales</button>
+<button type="button" data-filter="nuevas-energias">Nuevas Energías e Hidrógeno Verde</button>
 </div>
 </div>
 
@@ -264,48 +265,6 @@ footer li a:hover{color:#fff;}
 <p>Sistemas que protegen la eficiencia y la vida útil de sus torres.</p>
 <div class="tags"><span>Incrustación</span><span>Corrosión</span></div>
 <span class="go">Cotizar</span>
-</a>
-</div>
-</div>
-</section>
-<!-- HIDROGENO -->
-<section class="prod" id="elcogen" data-area="nuevas-energias">
-<div class="container">
-<div class="prod-top">
-<div class="prod-info reveal">
-<span class="tag">Nuevas Energías e Hidrógeno</span>
-<h2>Hidrógeno verde y energía sin emisiones</h2>
-<div class="lead">La tecnología que impulsa la descarbonización industrial.</div>
-<p>Celdas, stacks y módulos de óxido sólido para producir hidrógeno mediante electrólisis y generar energía eléctrica con alta eficiencia y sin emisiones.</p>
-<div class="by"><div class="by-logo"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></div><span>Fabricante europeo · Estonia y Finlandia</span></div><br>
-<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Consulta%20hidr%C3%B3geno%20verde">Consultar proyecto</a>
-</div>
-<div class="prod-visual reveal d1"><img src="assets/elcogen-2x2-module.png" alt="Módulo elcoModule 2x2 Elcogen"></div>
-</div>
-<div class="cards">
-<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Consulta%20celdas%20y%20stacks">
-<h4>Celdas y stacks SOFC / SOEC</h4>
-<p>Celdas reversibles: operan como celda de combustible o como electrolizador.</p>
-<div class="tags"><span>Hidrógeno</span><span>Energía</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Consulta%20m%C3%B3dulos%20elcoModule">
-<h4>Módulos elcoModule</h4>
-<p>Stacks agrupados para integrarse en sistemas de mayor escala.</p>
-<div class="tags"><span>Integradores</span><span>Proyectos</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Consulta%20Power-to-X">
-<h4>Power-to-X y gas-to-power</h4>
-<p>Electrólisis para combustibles sintéticos y generación a partir de gas.</p>
-<div class="tags"><span>Descarbonización</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Consulta%20sector%20mar%C3%ADtimo">
-<h4>Sector marítimo</h4>
-<p>Energía sin emisiones para aplicaciones a bordo de embarcaciones.</p>
-<div class="tags"><span>Propulsión</span><span>Energía auxiliar</span></div>
-<span class="go">Consultar</span>
 </a>
 </div>
 </div>
@@ -402,13 +361,13 @@ footer li a:hover{color:#fff;}
 <span class="tag">Tecnologías de Procesos Industriales</span>
 <h2>Protección contra el desgaste y metal duro</h2>
 <div class="lead">Alargue la vida útil de sus componentes más exigidos.</div>
-<p>Componentes y recubrimientos de metal duro (carburo de tungsteno) para las piezas que más sufren el desgaste en su proceso, con menos paradas y menos reposiciones.</p>
+<p>Componentes de metal duro (carburo de tungsteno) para las piezas que más sufren el desgaste en su proceso, con menos paradas y menos reposiciones.</p>
 <div class="by"><div class="by-logo"><img src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></div><span>Fabricante alemán · producción en Portugal</span></div><br>
 <a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Consulta%20metal%20duro%20DURIT">Consultar soluciones</a>
 </div>
 <div class="prod-visual photo reveal d1" role="img" aria-label="Cuchillas y piezas de metal duro DURIT" style="background-image:url('https://www.durit.com/fileadmin/user_upload/products/carbide/cutting-tools/en/0-cutting-tools-durit.jpg');"></div>
 </div>
-<div class="cards">
+<div class="cards cards-3">
 <a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Consulta%20componentes%20para%20bombas%20y%20v%C3%A1lvulas%20-%20DURIT">
 <h4>Bombas, válvulas y compresores</h4>
 <p>Conos, asientos, jaulas y émbolos de metal duro que aumentan la vida útil.</p>
@@ -427,10 +386,46 @@ footer li a:hover{color:#fff;}
 <div class="tags"><span>Extrusión</span><span>Mezcla</span></div>
 <span class="go">Consultar</span>
 </a>
-<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Consulta%20recubrimientos%20antidesgaste%20-%20DURIT">
-<h4>Recubrimientos antidesgaste</h4>
-<p>Proyección térmica (HVOF/APS), laser cladding y recubrimientos PVD y CVD.</p>
-<div class="tags"><span>Protección</span><span>Reparación</span></div>
+</div>
+</div>
+</section>
+<!-- HIDROGENO -->
+<section class="prod" id="elcogen" data-area="nuevas-energias">
+<div class="container">
+<div class="prod-top">
+<div class="prod-info reveal">
+<span class="tag">Nuevas Energías e Hidrógeno Verde</span>
+<h2>Hidrógeno verde y energía sin emisiones</h2>
+<div class="lead">La tecnología que impulsa la descarbonización industrial.</div>
+<p>Celdas, stacks y módulos de óxido sólido para producir hidrógeno mediante electrólisis y generar energía eléctrica con alta eficiencia y sin emisiones.</p>
+<div class="by"><div class="by-logo"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></div><span>Fabricante europeo · Estonia y Finlandia</span></div><br>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Consulta%20hidr%C3%B3geno%20verde">Consultar proyecto</a>
+</div>
+<div class="prod-visual reveal d1"><img src="assets/elcogen-2x2-module.png" alt="Módulo elcoModule 2x2 Elcogen"></div>
+</div>
+<div class="cards">
+<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Consulta%20celdas%20y%20stacks">
+<h4>Celdas y stacks SOFC / SOEC</h4>
+<p>Celdas reversibles: operan como celda de combustible o como electrolizador.</p>
+<div class="tags"><span>Hidrógeno</span><span>Energía</span></div>
+<span class="go">Consultar</span>
+</a>
+<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Consulta%20m%C3%B3dulos%20elcoModule">
+<h4>Módulos elcoModule</h4>
+<p>Stacks agrupados para integrarse en sistemas de mayor escala.</p>
+<div class="tags"><span>Integradores</span><span>Proyectos</span></div>
+<span class="go">Consultar</span>
+</a>
+<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Consulta%20Power-to-X">
+<h4>Power-to-X y gas-to-power</h4>
+<p>Electrólisis para combustibles sintéticos y generación a partir de gas.</p>
+<div class="tags"><span>Descarbonización</span></div>
+<span class="go">Consultar</span>
+</a>
+<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Consulta%20sector%20mar%C3%ADtimo">
+<h4>Sector marítimo</h4>
+<p>Energía sin emisiones para aplicaciones a bordo de embarcaciones.</p>
+<div class="tags"><span>Propulsión</span><span>Energía auxiliar</span></div>
 <span class="go">Consultar</span>
 </a>
 </div>
@@ -492,7 +487,7 @@ document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 } else {
 document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
 }
-var areas = ['soluciones-energeticas','nuevas-energias','procesos-industriales'];
+var areas = ['soluciones-energeticas','procesos-industriales','nuevas-energias'];
 var btns = document.querySelectorAll('.filter button');
 var blocks = document.querySelectorAll('.prod');
 function applyFilter(f){
