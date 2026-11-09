@@ -76,7 +76,17 @@ header{position:sticky; top:0; z-index:60; background:var(--navy); border-bottom
 .pb-logo img{max-height:44px; max-width:210px; width:auto;}
 .evapco-md{height:56px; width:141px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-67px -42px; background-size:277px 127px;}
 .badge{display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--teal-dark); border:1px solid var(--teal); border-radius:2px; padding:4px 10px; margin-bottom:14px;}
-.pb-head h2{font-size:34px; margin-bottom:6px;}
+.pb-head h2{font-size:34px; margin-bottom:14px; max-width:560px;}
+.brand-by{margin-top:26px; background:#fff; border:1px solid var(--border); border-left:3px solid var(--teal); padding:20px 24px;}
+.brand-by small{display:block; font-size:11.5px; text-transform:uppercase; letter-spacing:.14em; font-weight:700; color:var(--gray-2); margin-bottom:14px;}
+.bb-row{display:flex; align-items:center; gap:20px; margin-bottom:12px;}
+.bb-logo{min-width:110px; height:40px; display:flex; align-items:center;}
+.bb-logo img{max-height:32px; max-width:150px; width:auto;}
+.bb-row b{display:block; font-size:17px; color:var(--navy);}
+.bb-row span{font-size:13px; color:var(--gray-2);}
+.bb-desc{font-size:14.5px; margin:0;}
+.evapco-sm{height:36px; width:91px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-43px -27px; background-size:178px 82px;}
+
 .origin{font-size:14px; font-weight:600; color:var(--gray-2); margin-bottom:16px;}
 .pb-head p{margin-bottom:22px;}
 .pb-media{background:#fff; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; padding:32px; height:340px;}
@@ -147,9 +157,9 @@ section{padding:56px 0;}
 <div class="page-hero">
 <div class="container">
 <div class="breadcrumb"><a href="index.html">Inicio</a> / Productos</div>
-<div class="label">Catálogo por fabricante</div>
+<div class="label">Catálogo por tipo de producto</div>
 <h1>Productos y líneas de equipos</h1>
-<p>Conozca las líneas de productos de los fabricantes que representamos. Filtre por área de negocio o solicite una cotización directamente por línea.</p>
+<p>Conozca los tipos de producto que ofrecemos y la marca con la que los atendemos. Filtre por área de negocio o solicite una cotización directamente por línea.</p>
 </div>
 </div>
 
@@ -168,15 +178,18 @@ section{padding:56px 0;}
 <div class="container">
 <div class="pb-head">
 <div>
-<div class="pb-logo"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></div>
 <span class="badge">Energía Térmica y Procesos</span>
-<h2>Superior Boiler</h2>
-<div class="origin">Kansas, Estados Unidos · desde 1917</div>
-<p>Fabricante estadounidense de calderas industriales a medida, con más de un siglo de trayectoria. Diseña y construye cada caldera bajo pedido, priorizando piezas no propietarias que facilitan el abastecimiento de repuestos y reducen los tiempos de parada.</p>
+<h2>Calderas industriales</h2>
+<p>Generadores de vapor y agua caliente para procesos industriales, en configuraciones pirotubulares y acuotubulares, nuevas o en arriendo.</p>
+<div class="brand-by">
+<small>Marca con la que lo atendemos</small>
+<div class="bb-row"><div class="bb-logo"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></div><div><b>Superior Boiler</b><span>Kansas, Estados Unidos · desde 1917</span></div></div>
+<p class="bb-desc">Fabricante estadounidense de calderas industriales a medida, con más de un siglo de trayectoria. Diseña y construye cada caldera bajo pedido, priorizando piezas no propietarias que facilitan el abastecimiento de repuestos y reducen los tiempos de parada.</p>
+</div>
 </div>
 <div class="pb-media"><img src="https://www.superiorboiler.com/app/uploads/2024/04/Dakota.png" alt="Calderas Superior Boiler"></div>
 </div>
-<div class="lines-title">Líneas de producto</div>
+<div class="lines-title">Líneas disponibles</div>
 <div class="lines">
 <div class="line">
 <h4>Calderas pirotubulares Scotch Marine</h4>
@@ -211,15 +224,18 @@ section{padding:56px 0;}
 <div class="container">
 <div class="pb-head">
 <div>
-<div class="pb-logo"><div class="evapco-md" role="img" aria-label="Evapco"></div></div>
 <span class="badge">Energía Térmica y Procesos</span>
-<h2>Evapco</h2>
-<div class="origin">Estados Unidos · presencia en todos los continentes</div>
-<p>Compañía de propiedad de sus empleados y líder mundial en transferencia de calor y enfriamiento evaporativo, con manufactura y oficinas en todos los continentes.</p>
+<h2>Torres de enfriamiento y refrigeración industrial</h2>
+<p>Equipos para rechazar calor en procesos industriales y sistemas de refrigeración: torres de enfriamiento, enfriadores de circuito cerrado y condensadores evaporativos.</p>
+<div class="brand-by">
+<small>Marca con la que lo atendemos</small>
+<div class="bb-row"><div class="bb-logo"><div class="evapco-sm" role="img" aria-label="Evapco"></div></div><div><b>Evapco</b><span>Estados Unidos · presencia en todos los continentes</span></div></div>
+<p class="bb-desc">Compañía de propiedad de sus empleados y líder mundial en transferencia de calor y enfriamiento evaporativo, con manufactura y oficinas en todos los continentes.</p>
+</div>
 </div>
 <div class="pb-media"><img src="https://www.evapco.com/sites/evapco.com/files/styles/primary_image_teaser_med/public/images/2019-11/At-atlas-new-sq_0.png" alt="Torre de enfriamiento Evapco Atlas"></div>
 </div>
-<div class="lines-title">Líneas de producto</div>
+<div class="lines-title">Líneas disponibles</div>
 <div class="lines">
 <div class="line">
 <h4>Torres de enfriamiento</h4>
@@ -254,15 +270,18 @@ section{padding:56px 0;}
 <div class="container">
 <div class="pb-head">
 <div>
-<div class="pb-logo"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries" style="max-height:34px;"></div>
 <span class="badge">Medio Ambiente y Control</span>
-<h2>Fournier Industries</h2>
-<div class="origin">Quebec, Canadá</div>
-<p>Constructor y fabricante de equipos industriales especializado en deshidratación de lodos municipales e industriales y en manejo de sólidos a granel.</p>
+<h2>Deshidratación de lodos y tratamiento de RILes</h2>
+<p>Equipos para reducir el volumen de lodos municipales e industriales mediante prensas y sistemas de dosificación, además de manejo de sólidos a granel.</p>
+<div class="brand-by">
+<small>Marca con la que lo atendemos</small>
+<div class="bb-row"><div class="bb-logo"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></div><div><b>Fournier Industries</b><span>Quebec, Canadá</span></div></div>
+<p class="bb-desc">Constructor y fabricante de equipos industriales especializado en deshidratación de lodos municipales e industriales y en manejo de sólidos a granel.</p>
+</div>
 </div>
 <div class="pb-media"><img src="assets/fournier-rotary-press.png" alt="Prensa rotativa Fournier Industries"></div>
 </div>
-<div class="lines-title">Líneas de producto</div>
+<div class="lines-title">Líneas disponibles</div>
 <div class="lines">
 <div class="line">
 <h4>Prensa rotativa (Rotary Press)</h4>
@@ -297,15 +316,18 @@ section{padding:56px 0;}
 <div class="container">
 <div class="pb-head">
 <div>
-<div class="pb-logo"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></div>
 <span class="badge">Medio Ambiente y Control</span>
-<h2>Orthodyne</h2>
-<div class="origin">Bélgica · más de 50 años de experiencia</div>
-<p>Fabricante especializado en cromatografía de gases y analizadores en línea, con distribución en más de 20 países. Sus equipos miden trazas e impurezas de gases industriales de alta pureza con precisión a nivel de partes por billón.</p>
+<h2>Cromatografía y análisis de gases</h2>
+<p>Instrumentación para medir la composición y las impurezas de gases de proceso, en línea y en laboratorio, hasta nivel de partes por billón.</p>
+<div class="brand-by">
+<small>Marca con la que lo atendemos</small>
+<div class="bb-row"><div class="bb-logo"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></div><div><b>Orthodyne</b><span>Bélgica · más de 50 años de experiencia</span></div></div>
+<p class="bb-desc">Fabricante especializado en cromatografía de gases y analizadores en línea, con distribución en más de 20 países. Sus equipos miden trazas e impurezas de gases industriales de alta pureza.</p>
+</div>
 </div>
 <div class="pb-media"><img src="https://www.orthodyne.be/wp-content/uploads/2017/02/orthosmart-gas-chromatograph.png" alt="Cromatógrafo de gases Orthodyne"></div>
 </div>
-<div class="lines-title">Líneas de producto</div>
+<div class="lines-title">Líneas disponibles</div>
 <div class="lines">
 <div class="line">
 <h4>Cromatógrafos de gases</h4>
@@ -340,15 +362,18 @@ section{padding:56px 0;}
 <div class="container">
 <div class="pb-head">
 <div>
-<div class="pb-logo"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen" style="max-height:34px;"></div>
 <span class="badge">Energías Limpias</span>
-<h2>Elcogen</h2>
-<div class="origin">Estonia y Finlandia</div>
-<p>Fabricante europeo de celdas, stacks y módulos de óxido sólido para producir hidrógeno mediante electrólisis y generar energía eléctrica con alta eficiencia y sin emisiones.</p>
+<h2>Celdas de óxido sólido para hidrógeno verde</h2>
+<p>Celdas, stacks y módulos para producir hidrógeno mediante electrólisis y generar energía eléctrica sin emisiones.</p>
+<div class="brand-by">
+<small>Marca con la que lo atendemos</small>
+<div class="bb-row"><div class="bb-logo"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></div><div><b>Elcogen</b><span>Estonia y Finlandia</span></div></div>
+<p class="bb-desc">Fabricante europeo de celdas, stacks y módulos de óxido sólido para producir hidrógeno mediante electrólisis y generar energía eléctrica con alta eficiencia y sin emisiones.</p>
+</div>
 </div>
 <div class="pb-media"><img src="assets/elcogen-2x2-module.png" alt="Módulo elcoModule 2x2 Elcogen"></div>
 </div>
-<div class="lines-title">Líneas de producto</div>
+<div class="lines-title">Líneas disponibles</div>
 <div class="lines">
 <div class="line">
 <h4>Celdas y stacks SOFC / SOEC</h4>
