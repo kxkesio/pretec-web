@@ -83,12 +83,13 @@ header{position:fixed; top:0; left:0; right:0; z-index:80; background:rgba(7,26,
 .by-logo{height:40px; min-width:84px; padding:0 14px; display:flex; align-items:center; justify-content:center; background:var(--bg); border-radius:100px;}
 .by-logo img{max-height:24px; max-width:96px; width:auto;}
 .by span{font-size:14px; font-weight:500; color:var(--gray);}
+.by-logo img[alt="DURIT"]{height:26px; width:auto; max-height:none; max-width:none;}
 .evapco-sm{height:30px; width:76px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-36px -22px; background-size:148px 68px;}
 .prod-visual{background:linear-gradient(160deg,#fff,#e7eef3); border-radius:30px; height:420px; display:flex; align-items:center; justify-content:center; padding:36px; box-shadow:var(--shadow); position:relative; overflow:hidden;}
 .prod:nth-of-type(even) .prod-visual{background:linear-gradient(160deg,#fff,#dfe9ef);}
 .prod-visual:before{content:""; position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(closest-side, rgba(23,179,160,.18), transparent);}
 .prod-visual img{position:relative; max-height:100%; max-width:100%; object-fit:contain;}
-.prod-visual img.logo-visual{max-width:70%; max-height:35%;}
+.prod-visual img.logo-visual{width:62%; max-width:62%; height:auto; max-height:none;}
 
 .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
 .pcard{display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:22px; padding:28px 26px 24px; transition:transform .3s, box-shadow .3s, border-color .3s;}
