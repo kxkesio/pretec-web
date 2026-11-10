@@ -105,6 +105,10 @@ header.scrolled{background:rgba(7,26,44,.97); box-shadow:0 4px 24px rgba(0,0,0,.
 .acard-img{position:relative; height:220px; overflow:hidden;}
 .acard-img img{width:100%; height:100%; object-fit:cover;}
 .acard-img:after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(7,26,44,0) 55%, rgba(7,26,44,.45));}
+.acard-img.split{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:#fff;}
+.acard-img.split:after{display:none;}
+.acard-img.split > div{background:#f2f5f7; display:flex; align-items:center; justify-content:center; padding:18px; overflow:hidden;}
+.acard-img.split img{width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain;}
 .acard-body{padding:30px 30px 32px; display:flex; flex-direction:column; flex:1;}
 .acard h3{font-size:22px; margin-bottom:14px;}
 .acard .q{font-size:15px; font-weight:600; color:var(--teal-dark); margin-bottom:14px;}
@@ -318,7 +322,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="areas">
 
 <article class="acard reveal">
-<div class="acard-img"><img src="https://static.wixstatic.com/media/7ecf4c_0b840892aee94785b697a1ff32f013b2~mv2.jpg" alt="Ingeniero junto a torres de enfriamiento"></div>
+<div class="acard-img split"><div><img src="https://www.superiorboiler.com/app/uploads/2024/04/Dakota.png" alt="Caldera industrial"></div><div><img src="https://www.evapco.com/sites/evapco.com/files/styles/primary_image_teaser_med/public/images/2019-11/At-atlas-new-sq_0.png" alt="Torre de enfriamiento"></div></div>
 <div class="acard-body">
 <h3>Soluciones Energéticas</h3>
 <p>Generación de vapor y sistemas de enfriamiento para procesos industriales, con ingeniería de aplicación y servicio técnico.</p>
