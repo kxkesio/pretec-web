@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRETEC | Tecnología para una industria más eficiente y sustentable</title>
-<meta name="description" content="PRETEC representa fabricantes de clase mundial en calderas, enfriamiento, tratamiento de lodos y RILes, análisis de gases e hidrógeno verde para la industria en Chile.">
+<title>PRETEC Ingeniería | Ingeniería y soporte técnico para la industria</title>
+<meta name="description" content="PRETEC Ingeniería SpA: ingeniería de aplicación, soporte técnico y comercial para equipos industriales de fabricantes internacionales en Chile: calderas, enfriamiento, tratamiento de lodos, análisis de gases e hidrógeno verde.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,14 +15,14 @@
 --navy-2:#0c2a45;
 --ink:#0f1d2a;
 --gray:#5b6b78;
---teal:#17b3a0;
---teal-dark:#0e8f80;
---mint:#e3f6f3;
+--teal:#0e8f80;
+--teal-dark:#0b7569;
+--mint:#e8f1f0;
 --bg:#f4f7f9;
 --line:#e4eaee;
 --white:#fff;
---shadow:0 10px 30px rgba(7,26,44,.08);
---shadow-lg:0 24px 60px rgba(7,26,44,.16);
+--shadow:0 2px 10px rgba(7,26,44,.06);
+--shadow-lg:0 8px 24px rgba(7,26,44,.12);
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
@@ -31,27 +31,28 @@ img{max-width:100%; display:block;}
 a{color:inherit; text-decoration:none;}
 ul{list-style:none;}
 .container{max-width:1200px; margin:0 auto; padding:0 28px;}
-section{padding:110px 0; scroll-margin-top:70px;}
+section{padding:96px 0; scroll-margin-top:70px;}
 h1,h2,h3,h4{font-weight:800; letter-spacing:-0.025em; color:var(--navy); line-height:1.1;}
 p{color:var(--gray); font-size:16.5px;}
-.kicker{display:inline-block; font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--teal-dark); background:var(--mint); padding:7px 14px; border-radius:100px; margin-bottom:22px;}
+.kicker{display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); padding:0 0 0 38px; position:relative; margin-bottom:20px;}
+.kicker:before{content:""; position:absolute; left:0; top:50%; width:26px; height:2px; background:var(--teal);}
 .sec-head{max-width:700px; margin-bottom:56px;}
-.sec-head h2{font-size:44px; margin-bottom:18px;}
-.sec-head p{font-size:18px;}
+.sec-head h2{font-size:38px; margin-bottom:18px;}
+.sec-head p{font-size:17px;}
 .sec-head.center{margin-left:auto; margin-right:auto; text-align:center;}
-.btn{display:inline-flex; align-items:center; gap:10px; padding:16px 30px; border-radius:100px; font-weight:600; font-size:15px; transition:all .25s ease; border:1.5px solid transparent; cursor:pointer; font-family:inherit;}
-.btn-primary{background:var(--teal); color:#fff; box-shadow:0 8px 24px rgba(23,179,160,.35);}
-.btn-primary:hover{background:var(--teal-dark); transform:translateY(-2px);}
-.btn-ghost{border-color:rgba(255,255,255,.45); color:#fff; backdrop-filter:blur(6px);}
+.btn{display:inline-flex; align-items:center; gap:10px; padding:14px 26px; border-radius:3px; font-weight:600; font-size:14.5px; transition:background .2s, border-color .2s, color .2s; border:1.5px solid transparent; cursor:pointer; font-family:inherit;}
+.btn-primary{background:var(--teal); color:#fff;}
+.btn-primary:hover{background:var(--teal-dark);}
+.btn-ghost{border-color:rgba(255,255,255,.45); color:#fff; }
 .btn-ghost:hover{background:rgba(255,255,255,.12); border-color:#fff;}
 .btn-dark{background:var(--navy); color:#fff;}
-.btn-dark:hover{background:var(--navy-2); transform:translateY(-2px);}
+.btn-dark:hover{background:var(--navy-2);}
 .btn-line{border-color:var(--line); color:var(--navy); background:#fff;}
 .btn-line:hover{border-color:var(--teal); color:var(--teal-dark);}
 
 /* Header */
 header{position:fixed; top:0; left:0; right:0; z-index:80; transition:background .3s, box-shadow .3s;}
-header.scrolled{background:rgba(7,26,44,.94); backdrop-filter:blur(12px); box-shadow:0 4px 24px rgba(0,0,0,.18);}
+header.scrolled{background:rgba(7,26,44,.97); box-shadow:0 4px 24px rgba(0,0,0,.18);}
 .nav{display:flex; align-items:center; justify-content:space-between; height:78px;}
 .nav-logo{display:flex; align-items:center; gap:12px;}
 .nav-logo img{height:38px; width:auto;}
@@ -59,38 +60,39 @@ header.scrolled{background:rgba(7,26,44,.94); backdrop-filter:blur(12px); box-sh
 .nav-links{display:flex; align-items:center; gap:36px;}
 .nav-links a{color:#d6e2ea; font-size:14.5px; font-weight:500; transition:color .2s;}
 .nav-links a:hover, .nav-links a.active{color:#fff;}
-.nav-cta{background:var(--teal); color:#fff !important; padding:12px 24px; border-radius:100px; font-weight:600 !important;}
-.nav-cta:hover{background:var(--teal-dark);}
+.nav-cta{border:1px solid rgba(255,255,255,.5); color:#fff !important; padding:10px 22px; border-radius:3px; font-weight:600 !important;}
+.nav-cta:hover{background:#fff; color:var(--navy) !important;}
 .menu-toggle{display:none; color:#fff; font-size:28px; background:none; border:none; cursor:pointer;}
 
 /* Hero */
 .hero{position:relative; min-height:100vh; padding:0; display:flex; align-items:center; color:#fff; background:var(--navy) url('assets/que-hacemos-transporte.jpg') center 45%/cover; overflow:hidden;}
-.hero:before{content:""; position:absolute; inset:0; background:linear-gradient(105deg, rgba(7,26,44,.96) 0%, rgba(7,26,44,.82) 48%, rgba(7,26,44,.35) 100%);}
-.hero:after{content:""; position:absolute; left:-12%; bottom:-30%; width:60%; height:70%; background:radial-gradient(closest-side, rgba(23,179,160,.28), transparent); pointer-events:none;}
-.hero .container{position:relative; z-index:2; padding-top:150px; padding-bottom:190px; width:100%;}
-.hero .kicker{background:rgba(255,255,255,.1); color:#8fe7da; border:1px solid rgba(255,255,255,.18);}
-.hero h1{color:#fff; font-size:68px; max-width:880px; line-height:1.03; margin-bottom:26px;}
-.hero h1 em{font-style:normal; background:linear-gradient(90deg,#6fe5d6,#17b3a0); -webkit-background-clip:text; background-clip:text; color:transparent;}
-.hero p{color:#cfdce6; font-size:20px; max-width:600px; margin-bottom:42px;}
+.hero:before{content:""; position:absolute; inset:0; background:linear-gradient(105deg, rgba(7,26,44,.96) 0%, rgba(7,26,44,.88) 52%, rgba(7,26,44,.6) 100%);}
+.hero .container{position:relative; z-index:2; padding-top:150px; padding-bottom:210px; width:100%;}
+.hero .kicker{color:#8fe7da;}
+.hero .kicker:before{background:#8fe7da;}
+.hero h1{color:#fff; font-size:54px; max-width:860px; line-height:1.08; margin-bottom:24px;}
+.hero h1 em{font-style:normal; color:#8fe7da;}
+.hero p{color:#cfdce6; font-size:18px; max-width:680px; margin-bottom:38px;}
 .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
-.hero-stats{position:absolute; left:0; right:0; bottom:44px; z-index:3;}
-.hero-stats .container{padding-top:0; padding-bottom:0; display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
-.stat{background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); backdrop-filter:blur(14px); border-radius:18px; padding:22px 26px;}
-.stat b{display:block; font-size:32px; font-weight:800; color:#fff; letter-spacing:-.02em; line-height:1.1;}
+.hero-stats{position:absolute; left:0; right:0; bottom:0; z-index:3; background:rgba(7,26,44,.92); border-top:1px solid rgba(255,255,255,.14);}
+.hero-stats .container{padding-top:0; padding-bottom:0; display:grid; grid-template-columns:repeat(4,1fr); gap:0;}
+.stat{padding:24px 26px; border-left:1px solid rgba(255,255,255,.14);}
+.stat:first-child{border-left:none; padding-left:0;}
+.stat b{display:block; font-size:26px; font-weight:800; color:#fff; letter-spacing:-.02em; line-height:1.1;}
 .stat span{font-size:13.5px; color:#b9cbd8;}
 
 /* About */
 .about{display:grid; grid-template-columns:.95fr 1.05fr; gap:90px; align-items:center;}
 .about-img{position:relative;}
-.about-img img{width:100%; height:560px; object-fit:cover; border-radius:28px; box-shadow:var(--shadow-lg);}
-.about-badge{position:absolute; right:-26px; bottom:36px; background:var(--navy); color:#fff; border-radius:20px; padding:22px 28px; box-shadow:var(--shadow-lg);}
-.about-badge b{display:block; font-size:40px; font-weight:800; line-height:1; color:#6fe5d6;}
+.about-img img{width:100%; height:560px; object-fit:cover; border-radius:4px;}
+.about-badge{position:absolute; right:-20px; bottom:30px; background:var(--navy); color:#fff; border-radius:3px; border-left:4px solid var(--teal); padding:20px 26px;}
+.about-badge b{display:block; font-size:34px; font-weight:800; line-height:1; color:#8fe7da;}
 .about-badge span{font-size:13.5px; color:#b9cbd8;}
-.about h2{font-size:44px; margin-bottom:22px;}
-.about > div > p{margin-bottom:34px; font-size:18px;}
+.about h2{font-size:38px; margin-bottom:22px;}
+.about > div > p{margin-bottom:32px; font-size:17px;}
 .points{display:grid; gap:18px; margin-bottom:36px;}
 .point{display:flex; gap:18px; align-items:flex-start;}
-.point i{flex:none; width:46px; height:46px; border-radius:14px; background:var(--mint); color:var(--teal-dark); display:flex; align-items:center; justify-content:center; font-style:normal; font-weight:800;}
+.point i{flex:none; width:4px; align-self:stretch; background:var(--teal); border-radius:2px;}
 .point b{display:block; color:var(--navy); font-size:17px; margin-bottom:2px;}
 .point span{font-size:15px; color:var(--gray);}
 .about-actions{display:flex; gap:14px; flex-wrap:wrap;}
@@ -98,61 +100,59 @@ header.scrolled{background:rgba(7,26,44,.94); backdrop-filter:blur(12px); box-sh
 /* Areas */
 .bg-soft{background:var(--bg);}
 .areas{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
-.acard{position:relative; background:#fff; border-radius:24px; overflow:hidden; box-shadow:var(--shadow); transition:transform .3s, box-shadow .3s; display:flex; flex-direction:column;}
-.acard:hover{transform:translateY(-8px); box-shadow:var(--shadow-lg);}
-.acard-img{position:relative; height:240px; overflow:hidden;}
-.acard-img img{width:100%; height:100%; object-fit:cover; transition:transform .6s;}
-.acard:hover .acard-img img{transform:scale(1.06);}
-.acard-img:after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(7,26,44,0) 45%, rgba(7,26,44,.7));}
+.acard{position:relative; background:#fff; border:1px solid var(--line); border-radius:4px; overflow:hidden; transition:border-color .2s, box-shadow .2s; display:flex; flex-direction:column;}
+.acard:hover{border-color:var(--teal); box-shadow:var(--shadow-lg);}
+.acard-img{position:relative; height:220px; overflow:hidden;}
+.acard-img img{width:100%; height:100%; object-fit:cover;}
+.acard-img:after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(7,26,44,0) 55%, rgba(7,26,44,.45));}
 .acard-body{padding:30px 30px 32px; display:flex; flex-direction:column; flex:1;}
-.acard h3{font-size:25px; margin-bottom:14px;}
+.acard h3{font-size:22px; margin-bottom:14px;}
 .acard .q{font-size:15px; font-weight:600; color:var(--teal-dark); margin-bottom:14px;}
 .acard p{font-size:15.5px; margin-bottom:20px;}
 .acard ul{margin-bottom:24px; display:grid; gap:8px;}
 .acard li{position:relative; padding-left:26px; font-size:14.5px; color:var(--ink);}
 .acard li:before{content:""; position:absolute; left:0; top:6px; width:16px; height:16px; border-radius:50%; background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.4 2.4 4.6-4.8' fill='none' stroke='%230e8f80' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;}
 .brandline{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:auto; padding-top:22px; border-top:1px solid var(--line); margin-bottom:22px;}
-.brandline .bl{display:flex; align-items:center; justify-content:center; height:40px; padding:0 14px; background:var(--bg); border-radius:10px;}
+.brandline .bl{display:flex; align-items:center; justify-content:center; height:40px; padding:0 14px; background:var(--bg); border-radius:3px;}
 .brandline img{max-height:22px; max-width:90px; width:auto;}
 .brandline img[alt="DURIT"]{height:24px; width:auto; max-height:none; max-width:none;}
 .evapco-sm{height:30px; width:76px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-36px -22px; background-size:148px 68px;}
-.acard .more{font-weight:700; font-size:15px; color:var(--navy); display:inline-flex; gap:8px; align-items:center;}
+.acard .more{font-weight:700; font-size:14.5px; color:var(--navy); display:inline-flex; gap:8px; align-items:center;}
 .acard .more:after{content:"→"; transition:transform .25s; color:var(--teal-dark);}
-.acard:hover .more:after{transform:translateX(6px);}
+
 .acard .more:before{content:""; position:absolute; inset:0; z-index:1;}
 
 /* Productos tiles */
 .ptiles{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-.ptile{background:#fff; border:1px solid var(--line); border-radius:22px; padding:18px 18px 24px; transition:transform .3s, box-shadow .3s, border-color .3s; display:block;}
-.ptile:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:transparent;}
-.ptile-img{height:200px; border-radius:14px; background:linear-gradient(160deg,#f2f6f8,#e5edf2); display:flex; align-items:center; justify-content:center; padding:16px; margin-bottom:18px; overflow:hidden;}
-.ptile-img img{max-height:100%; max-width:100%; object-fit:contain; transition:transform .4s;}
+.ptile{background:#fff; border:1px solid var(--line); border-radius:4px; padding:16px 16px 22px; transition:border-color .2s, box-shadow .2s; display:block;}
+.ptile:hover{box-shadow:var(--shadow-lg); border-color:var(--teal);}
+.ptile-img{height:200px; border-radius:3px; background:#f2f5f7; display:flex; align-items:center; justify-content:center; padding:16px; margin-bottom:18px; overflow:hidden;}
+.ptile-img img{max-height:100%; max-width:100%; object-fit:contain;}
 .ptile-img.nopad{padding:0;}
 .ptile-img img.cover-img{width:100%; height:100%; max-width:none; max-height:none; object-fit:cover; object-position:100% 45%;}
 .ptile-img img.logo-img{width:62%; max-width:62%; height:auto; max-height:none;}
-.ptile:hover .ptile-img img{transform:scale(1.08);}
+
 .ptile h4{font-size:17px; line-height:1.25; margin-bottom:6px; padding:0 6px;}
 .ptile span{display:block; font-size:13.5px; color:var(--gray); padding:0 6px;}
 .center-cta{text-align:center; margin-top:48px;}
 
 /* Brands strip */
 .brands{display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:16px;}
-.brands a{min-width:0; overflow:hidden; height:130px; background:#fff; border:1px solid var(--line); border-radius:20px; display:flex; align-items:center; justify-content:center; padding:24px; transition:all .3s;}
-.brands a:hover{transform:translateY(-5px); box-shadow:var(--shadow); border-color:var(--teal);}
+.brands a{min-width:0; overflow:hidden; height:130px; background:#fff; border:1px solid var(--line); border-radius:4px; display:flex; align-items:center; justify-content:center; padding:24px; transition:border-color .2s;}
+.brands a:hover{border-color:var(--teal);}
 .brands img{height:44px; width:auto; max-width:100%; object-fit:contain;}
 .evapco-md{height:56px; width:141px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-67px -42px; background-size:277px 127px;}
 
 /* Industrias */
 .inds{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
-.ind{background:#fff; border:1px solid var(--line); border-radius:20px; padding:30px 26px; transition:all .3s;}
-.ind:hover{box-shadow:var(--shadow); transform:translateY(-4px); border-color:transparent;}
+.ind{background:#fff; border:1px solid var(--line); border-radius:4px; padding:28px 24px;}
 .ind svg{width:34px; height:34px; color:var(--teal-dark); margin-bottom:18px;}
 .ind h4{font-size:18px; margin-bottom:8px;}
 .ind p{font-size:14.5px; line-height:1.55;}
-.ind-cta{background:linear-gradient(140deg,var(--navy),var(--navy-2)); border:none; display:flex; flex-direction:column; justify-content:center;}
+.ind-cta{background:var(--navy); border:none; display:flex; flex-direction:column; justify-content:center;}
 .ind-cta h4{color:#fff;}
 .ind-cta p{color:#b9cbd8; margin-bottom:16px;}
-.ind-cta a{color:#6fe5d6; font-weight:700; font-size:15px;}
+.ind-cta a{color:#8fe7da; font-weight:700; font-size:15px;}
 
 /* Clientes - marquee */
 .clients{padding:90px 0 100px; background:var(--bg);}
@@ -160,32 +160,31 @@ header.scrolled{background:rgba(7,26,44,.94); backdrop-filter:blur(12px); box-sh
 .marquee{position:relative; overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent); mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);}
 .track{display:flex; align-items:center; gap:30px; width:max-content; animation:slide 38s linear infinite;}
 .marquee:hover .track{animation-play-state:paused;}
-.logo-box{flex:none; height:96px; min-width:190px; padding:0 34px; background:#fff; border-radius:18px; box-shadow:0 4px 16px rgba(7,26,44,.06); display:flex; align-items:center; justify-content:center;}
+.logo-box{flex:none; height:96px; min-width:190px; padding:0 34px; background:#fff; border:1px solid var(--line); border-radius:4px; display:flex; align-items:center; justify-content:center;}
 .logo-box img{max-height:46px; max-width:140px; width:auto; object-fit:contain; filter:grayscale(100%); opacity:.7; transition:all .3s;}
 .logo-box:hover img{filter:none; opacity:1;}
 @keyframes slide{to{transform:translateX(calc(-50% - 15px));}}
 
 /* CTA */
-.cta{position:relative; padding:0; overflow:hidden; background:linear-gradient(120deg,var(--navy),var(--navy-2));}
-.cta:before{content:""; position:absolute; right:-10%; top:-60%; width:55%; height:220%; background:radial-gradient(closest-side, rgba(23,179,160,.28), transparent);}
+.cta{position:relative; padding:0; overflow:hidden; background:var(--navy);}
 .cta .container{position:relative; padding-top:90px; padding-bottom:90px; display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap;}
-.cta h2{color:#fff; font-size:44px; max-width:700px; margin-bottom:14px;}
-.cta p{color:#b9cbd8; font-size:18px; max-width:640px;}
+.cta h2{color:#fff; font-size:36px; max-width:700px; margin-bottom:14px;}
+.cta p{color:#b9cbd8; font-size:17px; max-width:640px;}
 
 /* Contacto */
-.contact{display:grid; grid-template-columns:.85fr 1.15fr; gap:0; border-radius:30px; overflow:hidden; box-shadow:var(--shadow-lg);}
-.contact-info{background:linear-gradient(160deg,var(--navy),var(--navy-2)); color:#fff; padding:60px 52px;}
-.contact-info h2{color:#fff; font-size:38px; margin-bottom:16px;}
+.contact{display:grid; grid-template-columns:.85fr 1.15fr; gap:0; border-radius:4px; overflow:hidden; border:1px solid var(--line);}
+.contact-info{background:var(--navy); color:#fff; padding:56px 48px;}
+.contact-info h2{color:#fff; font-size:32px; margin-bottom:16px;}
 .contact-info > p{color:#b9cbd8; margin-bottom:38px;}
 .citem{display:flex; gap:16px; margin-bottom:26px; align-items:flex-start;}
-.citem i{flex:none; width:44px; height:44px; border-radius:12px; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; color:#6fe5d6;}
+.citem i{flex:none; width:44px; height:44px; border-radius:3px; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; color:#8fe7da;}
 .citem i svg{width:20px; height:20px;}
 .citem small{display:block; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8fa6b6; margin-bottom:2px;}
 .citem span, .citem a{font-size:16px; color:#fff;}
-form{display:grid; gap:18px; padding:56px 52px; background:#fff;}
+form{display:grid; gap:18px; padding:52px 48px; background:#fff;}
 .form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
 label{display:block; font-size:13px; font-weight:600; color:var(--navy); margin-bottom:7px;}
-input, textarea, select{width:100%; padding:15px 16px; border:1.5px solid var(--line); border-radius:12px; font-family:inherit; font-size:15px; color:var(--ink); background:#f9fbfc; transition:border-color .2s, background .2s;}
+input, textarea, select{width:100%; padding:15px 16px; border:1.5px solid var(--line); border-radius:3px; font-family:inherit; font-size:15px; color:var(--ink); background:#f9fbfc; transition:border-color .2s, background .2s;}
 input:focus, textarea:focus, select:focus{outline:none; border-color:var(--teal); background:#fff;}
 textarea{min-height:120px; resize:vertical;}
 form button{justify-self:start; border:none;}
@@ -202,7 +201,7 @@ footer li a:hover{color:#fff;}
 .footer-bottom{padding-top:26px; font-size:13.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
 
 /* Reveal */
-.js .reveal{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+.js .reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease;}
 .js .reveal.in{opacity:1; transform:none;}
 .js .d1{transition-delay:.1s;} .js .d2{transition-delay:.2s;} .js .d3{transition-delay:.3s;} .js .d4{transition-delay:.4s;}
 
@@ -224,16 +223,17 @@ section{padding:72px 0;}
 header{background:rgba(7,26,44,.94);}
 .hero{min-height:auto;}
 .hero .container{padding-top:130px; padding-bottom:50px;}
-.hero h1{font-size:40px;}
+.hero h1{font-size:34px;}
 .hero p{font-size:17px;}
-.hero-stats{position:relative; bottom:auto; padding-bottom:40px;}
+.hero-stats{position:relative; bottom:auto;}
 .hero-stats .container{grid-template-columns:1fr 1fr; padding-top:0; padding-bottom:0;}
+.stat:nth-child(odd){border-left:none; padding-left:0;}
 .hero{flex-direction:column; align-items:stretch; justify-content:center;}
 .about{grid-template-columns:1fr; gap:50px;}
 .about-img img{height:340px;}
 .about-badge{right:16px;}
 .areas{grid-template-columns:1fr;}
-.sec-head h2, .about h2, .cta h2{font-size:32px;}
+.sec-head h2, .about h2, .cta h2{font-size:28px;}
 .ptiles{grid-template-columns:1fr 1fr;}
 .brands{grid-template-columns:repeat(2,minmax(0,1fr));}
 .contact{grid-template-columns:1fr;}
@@ -259,7 +259,7 @@ header{background:rgba(7,26,44,.94);}
 <a href="#areas">Áreas de negocio</a>
 <a href="productos.html">Productos</a>
 <a href="#industrias">Industrias</a>
-<a href="#contacto" class="nav-cta">Cotizar</a>
+<a href="#contacto" class="nav-cta">Contacto</a>
 </nav>
 <button class="menu-toggle" id="menuToggle" aria-label="Menú">&#9776;</button>
 </div>
@@ -267,20 +267,20 @@ header{background:rgba(7,26,44,.94);}
 
 <section class="hero" id="inicio">
 <div class="container">
-<span class="kicker">Ingeniería y representaciones · Desde 2012</span>
-<h1>Tecnología de clase mundial para una industria más <em>eficiente y sustentable</em></h1>
-<p>Representamos a los fabricantes líderes en calderas, enfriamiento, tratamiento de lodos, análisis de gases e hidrógeno verde y protección contra el desgaste. Lo acompañamos desde la idea hasta la puesta en marcha.</p>
+<span class="kicker">Ingeniería y representaciones industriales · Desde 2012</span>
+<h1>Ingeniería y tecnología para una industria más <em>eficiente y sustentable</em></h1>
+<p>Representamos en Chile a fabricantes internacionales de equipos y sistemas para generación de vapor, enfriamiento industrial, tratamiento de lodos, análisis de gases e hidrógeno verde. Aportamos ingeniería de aplicación, soporte técnico y respaldo comercial en todas las etapas del proyecto.</p>
 <div class="hero-actions">
-<a href="#areas" class="btn btn-primary">Descubra cómo podemos ayudarle</a>
-<a href="productos.html" class="btn btn-ghost">Ver productos</a>
+<a href="#areas" class="btn btn-primary">Áreas de negocio</a>
+<a href="productos.html" class="btn btn-ghost">Líneas de producto</a>
 </div>
 </div>
 <div class="hero-stats">
 <div class="container">
-<div class="stat"><b>2012</b><span>Apoyando la energía limpia</span></div>
-<div class="stat"><b>6</b><span>Fabricantes de clase mundial</span></div>
+<div class="stat"><b>2012</b><span>Año de fundación</span></div>
+<div class="stat"><b>6</b><span>Fabricantes representados</span></div>
 <div class="stat"><b>3</b><span>Áreas de negocio</span></div>
-<div class="stat"><b>Chile</b><span>Soporte local, cobertura nacional</span></div>
+<div class="stat"><b>Chile</b><span>Soporte técnico local</span></div>
 </div>
 </div>
 </section>
@@ -289,20 +289,20 @@ header{background:rgba(7,26,44,.94);}
 <div class="container about">
 <div class="about-img reveal">
 <img src="https://static.wixstatic.com/media/7ecf4c_1e1dfd222db5496ba183e80c4a8baf23~mv2.jpg" alt="Equipo técnico en planta">
-<div class="about-badge"><b>+10 años</b><span>de experiencia en terreno</span></div>
+<div class="about-badge"><b>+10 años</b><span>de experiencia en proyectos industriales</span></div>
 </div>
 <div class="reveal d1">
 <span class="kicker">Quiénes somos</span>
-<h2>El socio técnico entre el fabricante y su planta</h2>
-<p>Traemos a Chile la mejor tecnología del mundo y nos hacemos cargo de que funcione en su operación, con personal técnico experto y una amplia red de proveedores de repuestos.</p>
+<h2>Ingeniería, soporte técnico y respaldo comercial</h2>
+<p>PRETEC Ingeniería SpA representa en Chile a fabricantes internacionales especializados. Acompañamos a las empresas en la definición técnica, la evaluación comercial, la implementación y la operación de cada solución, con personal técnico especializado y una red de proveedores de repuestos.</p>
 <div class="points">
-<div class="point"><i>1</i><div><b>Especificamos con usted</b><span>Elegimos el equipo correcto para su proceso, desde un repuesto hasta una solución compleja.</span></div></div>
-<div class="point"><i>2</i><div><b>Entregamos y ponemos en marcha</b><span>Entrega en planta, supervisión del montaje y comisionamiento.</span></div></div>
-<div class="point"><i>3</i><div><b>Seguimos a su lado</b><span>Servicio post-venta, modernizaciones, retrofits y repuestos.</span></div></div>
+<div class="point"><i></i><div><b>Ingeniería de aplicación</b><span>Definición técnica del equipo según los requerimientos del proceso, las condiciones de operación y la normativa aplicable.</span></div></div>
+<div class="point"><i></i><div><b>Gestión comercial y suministro</b><span>Propuestas técnico-comerciales, coordinación con el fabricante y entrega en planta.</span></div></div>
+<div class="point"><i></i><div><b>Puesta en marcha y soporte</b><span>Supervisión de montaje, comisionamiento, servicio post-venta, modernizaciones, retrofits y repuestos.</span></div></div>
 </div>
 <div class="about-actions">
 <a class="btn btn-dark" href="portafolio-pretec-2026-compressed.pdf" target="_blank">Descargar portafolio</a>
-<a class="btn btn-line" href="#contacto">Hablar con un especialista</a>
+<a class="btn btn-line" href="#contacto">Contactar al equipo técnico</a>
 </div>
 </div>
 </div>
@@ -312,8 +312,8 @@ header{background:rgba(7,26,44,.94);}
 <div class="container">
 <div class="sec-head reveal">
 <span class="kicker">Áreas de negocio</span>
-<h2>¿En qué podemos ayudarle?</h2>
-<p>Tres áreas pensadas según el desafío que enfrenta su planta.</p>
+<h2>Áreas de especialidad</h2>
+<p>Tres áreas de negocio con respaldo técnico y comercial para proyectos nuevos y plantas en operación.</p>
 </div>
 <div class="areas">
 
@@ -321,17 +321,17 @@ header{background:rgba(7,26,44,.94);}
 <div class="acard-img"><img src="https://static.wixstatic.com/media/7ecf4c_0b840892aee94785b697a1ff32f013b2~mv2.jpg" alt="Ingeniero junto a torres de enfriamiento"></div>
 <div class="acard-body">
 <h3>Soluciones Energéticas</h3>
-<p>Calderas y enfriamiento industrial para plantas que dependen de vapor, calor y agua de refrigeración confiables.</p>
+<p>Generación de vapor y sistemas de enfriamiento para procesos industriales, con ingeniería de aplicación y servicio técnico.</p>
 <ul>
-<li>Calderas industriales a medida</li>
-<li>Torres de enfriamiento y dry cooling</li>
-<li>Quemadores, repuestos y servicio</li>
+<li>Calderas industriales</li>
+<li>Torres de enfriamiento y enfriadores secos</li>
+<li>Quemadores, repuestos y servicio técnico</li>
 </ul>
 <div class="brandline">
 <span class="bl"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></span>
 <span class="bl"><span class="evapco-sm" role="img" aria-label="Evapco"></span></span>
 </div>
-<a class="more" href="productos.html#soluciones-energeticas">Ver productos</a>
+<a class="more" href="productos.html#soluciones-energeticas">Ver líneas de producto</a>
 </div>
 </article>
 
@@ -339,18 +339,18 @@ header{background:rgba(7,26,44,.94);}
 <div class="acard-img"><img src="https://fournierindustries.com/wp-content/uploads/2024/01/deshydratation-pressoir.jpg" alt="Planta de deshidratación de lodos"></div>
 <div class="acard-body">
 <h3>Tecnologías de Procesos Industriales</h3>
-<p>Tecnologías para tratar residuos, controlar gases y alargar la vida útil de los componentes críticos de su planta.</p>
+<p>Sistemas para tratamiento de residuos líquidos y lodos, análisis de gases de proceso y protección de componentes sometidos a desgaste.</p>
 <ul>
-<li>Deshidratación de lodos y RILes</li>
+<li>Deshidratación de lodos y tratamiento de RILes</li>
 <li>Análisis de gases en línea</li>
-<li>Protección contra el desgaste con metal duro</li>
+<li>Componentes de metal duro</li>
 </ul>
 <div class="brandline">
 <span class="bl"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></span>
 <span class="bl"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></span>
 <span class="bl"><img src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></span>
 </div>
-<a class="more" href="productos.html#procesos-industriales">Ver productos</a>
+<a class="more" href="productos.html#procesos-industriales">Ver líneas de producto</a>
 </div>
 </article>
 
@@ -358,7 +358,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="acard-img"><img src="https://elcogen.com/wp-content/uploads/2026/03/andres-tarto-0576-elcogen.jpg" alt="Planta de producción de celdas de óxido sólido"></div>
 <div class="acard-body">
 <h3>Nuevas Energías e Hidrógeno Verde</h3>
-<p>Celdas de óxido sólido para electrólisis de alta eficiencia y generación de energía sin emisiones.</p>
+<p>Tecnología de celdas de óxido sólido para electrólisis de alta temperatura y generación eléctrica de alta eficiencia.</p>
 <ul>
 <li>Electrólisis para hidrógeno verde</li>
 <li>Celdas de combustible (SOFC)</li>
@@ -367,7 +367,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="brandline">
 <span class="bl"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></span>
 </div>
-<a class="more" href="productos.html#nuevas-energias">Ver productos</a>
+<a class="more" href="productos.html#nuevas-energias">Ver líneas de producto</a>
 </div>
 </article>
 
@@ -378,9 +378,9 @@ header{background:rgba(7,26,44,.94);}
 <section id="productos">
 <div class="container">
 <div class="sec-head center reveal">
-<span class="kicker">Lo que ofrecemos</span>
-<h2>Equipos que mueven su industria</h2>
-<p>Una selección de nuestras líneas de producto. Cada una, de la mano del fabricante líder en su especialidad.</p>
+<span class="kicker">Líneas de producto</span>
+<h2>Equipos y sistemas de fabricantes especializados</h2>
+<p>Cada línea cuenta con respaldo técnico y comercial de PRETEC en Chile.</p>
 </div>
 <div class="ptiles">
 <a class="ptile reveal" href="productos.html#superior-boiler">
@@ -408,15 +408,15 @@ header{background:rgba(7,26,44,.94);}
 <h4>Hidrógeno verde</h4><span>Elcogen</span>
 </a>
 </div>
-<div class="center-cta reveal"><a class="btn btn-dark" href="productos.html">Explorar todos los productos</a></div>
+<div class="center-cta reveal"><a class="btn btn-dark" href="productos.html">Ver todas las líneas de producto</a></div>
 </div>
 </section>
 
 <section class="bg-soft" id="marcas" style="padding:90px 0;">
 <div class="container">
 <div class="sec-head center reveal" style="margin-bottom:40px;">
-<span class="kicker">Fabricantes que representamos</span>
-<h2 style="font-size:36px;">Marcas líderes en su especialidad</h2>
+<span class="kicker">Representaciones</span>
+<h2 style="font-size:32px;">Fabricantes representados</h2>
 </div>
 <div class="brands reveal">
 <a href="productos.html#superior-boiler"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></a>
@@ -433,8 +433,8 @@ header{background:rgba(7,26,44,.94);}
 <div class="container">
 <div class="sec-head reveal">
 <span class="kicker">Industrias</span>
-<h2>Trabajamos donde su operación lo necesita</h2>
-<p>Con empresas en operación y proyectos nuevos que buscan mejorar procesos, cumplir la normativa y ganar confiabilidad.</p>
+<h2>Sectores industriales</h2>
+<p>Proyectos y plantas en operación que requieren confiabilidad, eficiencia y cumplimiento normativo.</p>
 </div>
 <div class="inds">
 <div class="ind reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h6M9.5 16h6"/></svg><h4>Celulosa y papel</h4><p>Vapor de proceso, recuperación de calor y enfriamiento continuo.</p></div>
@@ -444,7 +444,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="ind reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg><h4>Energía y generación</h4><p>Recuperación de calor, enfriamiento de ciclos y energía sin emisiones.</p></div>
 <div class="ind reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 7 6 10.5a6 6 0 0 1-12 0C6 10 9 7 12 3z"/></svg><h4>Sanitaria y aguas</h4><p>Deshidratación de lodos municipales y tratamiento de RILes.</p></div>
 <div class="ind reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg><h4>Química y gases industriales</h4><p>Cromatografía, analizadores en línea y plantas de separación de aire.</p></div>
-<div class="ind ind-cta reveal d3"><h4>¿Su industria no está aquí?</h4><p>Cuéntenos su proceso y buscamos la mejor solución.</p><a href="#contacto">Hablemos →</a></div>
+<div class="ind ind-cta reveal d3"><h4>Otros sectores</h4><p>Evaluamos su aplicación junto al fabricante correspondiente.</p><a href="#contacto">Contactar →</a></div>
 </div>
 </div>
 </section>
@@ -453,7 +453,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="container">
 <div class="sec-head center reveal">
 <span class="kicker">Clientes</span>
-<h2 style="font-size:36px;">Empresas que confían en nosotros</h2>
+<h2 style="font-size:32px;">Clientes</h2>
 </div>
 </div>
 <div class="marquee">
@@ -479,10 +479,10 @@ header{background:rgba(7,26,44,.94);}
 <section class="cta">
 <div class="container">
 <div>
-<h2>Pongamos en marcha su próximo proyecto</h2>
-<p>Evaluaciones, diagnósticos, modernizaciones, retrofits y puestas en marcha, con respaldo de los mejores fabricantes del mundo.</p>
+<h2>Evaluación técnica de su proyecto</h2>
+<p>Diagnósticos, modernizaciones, retrofits y puesta en marcha, con el respaldo de fabricantes internacionales.</p>
 </div>
-<a href="#contacto" class="btn btn-primary">Solicitar una cotización</a>
+<a href="#contacto" class="btn btn-primary">Solicitar propuesta técnico-comercial</a>
 </div>
 </section>
 
@@ -490,32 +490,32 @@ header{background:rgba(7,26,44,.94);}
 <div class="container">
 <div class="contact reveal">
 <div class="contact-info">
-<h2>Conversemos sobre su proyecto</h2>
-<p>Cuéntenos qué necesita y un especialista de nuestro equipo se pondrá en contacto.</p>
+<h2>Contacto técnico y comercial</h2>
+<p>Describa su requerimiento. El equipo de PRETEC responderá con la información técnica y comercial correspondiente.</p>
 <div class="citem"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></i><div><small>Dirección</small><span>Av. Alonso de Córdova 5870, of. 308<br>Las Condes, Santiago</span></div></div>
 <div class="citem"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></i><div><small>Teléfono</small><a href="tel:+56226811813">+56 22 681 1813</a></div></div>
 <div class="citem"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><div><small>Email</small><a href="mailto:contacto@pretec.cl">contacto@pretec.cl</a></div></div>
 </div>
 <form action="mailto:contacto@pretec.cl" method="post" enctype="text/plain">
 <div class="form-row">
-<div><label for="f-nombre">Nombre</label><input id="f-nombre" name="Nombre" type="text" required></div>
-<div><label for="f-empresa">Empresa</label><input id="f-empresa" name="Empresa" type="text"></div>
+<div><label for="f-nombre">Nombre y apellido</label><input id="f-nombre" name="Nombre" type="text" required></div>
+<div><label for="f-empresa">Empresa</label><input id="f-empresa" name="Empresa" type="text" required></div>
 </div>
 <div class="form-row">
 <div><label for="f-email">Email</label><input id="f-email" name="Email" type="email" required></div>
 <div><label for="f-tel">Teléfono</label><input id="f-tel" name="Teléfono" type="tel"></div>
 </div>
 <div>
-<label for="f-area">¿En qué área necesita ayuda?</label>
+<label for="f-area">Área de interés</label>
 <select id="f-area" name="Área de interés">
 <option>Soluciones Energéticas</option>
 <option>Tecnologías de Procesos Industriales</option>
 <option>Nuevas Energías e Hidrógeno Verde</option>
 <option>Repuestos y servicio técnico</option>
-<option>Otro / no estoy seguro</option>
+<option>Otra consulta</option>
 </select>
 </div>
-<div><label for="f-msg">Mensaje</label><textarea id="f-msg" name="Mensaje" required></textarea></div>
+<div><label for="f-msg">Descripción del requerimiento</label><textarea id="f-msg" name="Mensaje" required></textarea></div>
 <button type="submit" class="btn btn-primary">Enviar solicitud</button>
 </form>
 </div>
@@ -527,7 +527,7 @@ header{background:rgba(7,26,44,.94);}
 <div class="footer-top">
 <div>
 <div class="footer-logo"><img src="https://static.wixstatic.com/media/7ecf4c_56aa6e17863a4255be07e021bb18e43b~mv2.png" alt="Pretec">PRETEC</div>
-<p>Ingeniería y representaciones para una industria más eficiente y sustentable.</p>
+<p>Ingeniería, soporte técnico y representaciones industriales en Chile.</p>
 </div>
 <div>
 <h4>Navegación</h4>

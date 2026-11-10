@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Productos | PRETEC</title>
-<meta name="description" content="Calderas industriales, torres de enfriamiento, deshidratación de lodos, análisis de gases e hidrógeno verde de los fabricantes líderes que representa PRETEC.">
+<title>Líneas de producto | PRETEC Ingeniería</title>
+<meta name="description" content="Líneas de producto de los fabricantes representados por PRETEC Ingeniería: calderas industriales, torres de enfriamiento, deshidratación de lodos, análisis de gases, metal duro e hidrógeno verde.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
 --navy-2:#0c2a45;
 --ink:#0f1d2a;
 --gray:#5b6b78;
---teal:#17b3a0;
---teal-dark:#0e8f80;
+--teal:#0e8f80;
+--teal-dark:#0b7569;
 --mint:#e3f6f3;
 --bg:#f4f7f9;
 --line:#e4eaee;
@@ -33,15 +33,16 @@ ul{list-style:none;}
 .container{max-width:1200px; margin:0 auto; padding:0 28px;}
 h1,h2,h3,h4{font-weight:800; letter-spacing:-0.025em; color:var(--navy); line-height:1.1;}
 p{color:var(--gray); font-size:16.5px;}
-.kicker{display:inline-block; font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--teal-dark); background:var(--mint); padding:7px 14px; border-radius:100px; margin-bottom:20px;}
-.btn{display:inline-flex; align-items:center; gap:10px; padding:16px 30px; border-radius:100px; font-weight:600; font-size:15px; transition:all .25s ease; border:1.5px solid transparent; cursor:pointer; font-family:inherit;}
-.btn-primary{background:var(--teal); color:#fff; box-shadow:0 8px 24px rgba(23,179,160,.35);}
-.btn-primary:hover{background:var(--teal-dark); transform:translateY(-2px);}
+.kicker{display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); padding:0 0 0 38px; position:relative; margin-bottom:20px;}
+.kicker:before{content:""; position:absolute; left:0; top:50%; width:26px; height:2px; background:var(--teal);}
+.btn{display:inline-flex; align-items:center; gap:10px; padding:14px 26px; border-radius:3px; font-weight:600; font-size:14.5px; transition:background .2s; border:1.5px solid transparent; cursor:pointer; font-family:inherit;}
+.btn-primary{background:var(--teal); color:#fff;}
+.btn-primary:hover{background:var(--teal-dark);}
 .btn-dark{background:var(--navy); color:#fff;}
-.btn-dark:hover{background:var(--navy-2); transform:translateY(-2px);}
+.btn-dark:hover{background:var(--navy-2);}
 
 /* Header */
-header{position:fixed; top:0; left:0; right:0; z-index:80; background:rgba(7,26,44,.94); backdrop-filter:blur(12px); box-shadow:0 4px 24px rgba(0,0,0,.18);}
+header{position:fixed; top:0; left:0; right:0; z-index:80; background:rgba(7,26,44,.97);}
 .nav{display:flex; align-items:center; justify-content:space-between; height:78px;}
 .nav-logo{display:flex; align-items:center; gap:12px;}
 .nav-logo img{height:38px; width:auto;}
@@ -49,45 +50,44 @@ header{position:fixed; top:0; left:0; right:0; z-index:80; background:rgba(7,26,
 .nav-links{display:flex; align-items:center; gap:36px;}
 .nav-links a{color:#d6e2ea; font-size:14.5px; font-weight:500; transition:color .2s;}
 .nav-links a:hover, .nav-links a.active{color:#fff;}
-.nav-cta{background:var(--teal); color:#fff !important; padding:12px 24px; border-radius:100px; font-weight:600 !important;}
-.nav-cta:hover{background:var(--teal-dark);}
+.nav-cta{border:1px solid rgba(255,255,255,.5); color:#fff !important; padding:10px 22px; border-radius:3px; font-weight:600 !important;}
+.nav-cta:hover{background:#fff; color:var(--navy) !important;}
 .menu-toggle{display:none; color:#fff; font-size:28px; background:none; border:none; cursor:pointer;}
 
 /* Hero */
 .page-hero{position:relative; padding:170px 0 90px; color:#fff; background:var(--navy) url('assets/que-hacemos-transporte.jpg') center 45%/cover; overflow:hidden;}
-.page-hero:before{content:""; position:absolute; inset:0; background:linear-gradient(105deg, rgba(7,26,44,.97) 0%, rgba(7,26,44,.85) 55%, rgba(7,26,44,.5) 100%);}
-.page-hero:after{content:""; position:absolute; right:-8%; bottom:-50%; width:50%; height:120%; background:radial-gradient(closest-side, rgba(23,179,160,.25), transparent);}
+.page-hero:before{content:""; position:absolute; inset:0; background:linear-gradient(105deg, rgba(7,26,44,.97) 0%, rgba(7,26,44,.9) 55%, rgba(7,26,44,.65) 100%);}
 .page-hero .container{position:relative; z-index:2;}
-.page-hero .kicker{background:rgba(255,255,255,.1); color:#8fe7da; border:1px solid rgba(255,255,255,.18);}
-.page-hero h1{color:#fff; font-size:58px; max-width:760px; margin-bottom:20px;}
-.page-hero p{color:#cfdce6; font-size:20px; max-width:600px;}
+.page-hero .kicker{color:#8fe7da;}
+.page-hero .kicker:before{background:#8fe7da;}
+.page-hero h1{color:#fff; font-size:46px; max-width:760px; margin-bottom:20px;}
+.page-hero p{color:#cfdce6; font-size:18px; max-width:680px;}
 
 /* Filtro */
-.filter{position:sticky; top:78px; z-index:50; background:rgba(255,255,255,.94); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+.filter{position:sticky; top:78px; z-index:50; background:#fff; border-bottom:1px solid var(--line);}
 .filter .container{display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding-top:16px; padding-bottom:16px;}
-.filter button{font-family:inherit; font-size:14px; font-weight:600; color:var(--navy); background:var(--bg); border:1.5px solid transparent; border-radius:100px; padding:10px 22px; cursor:pointer; transition:all .2s;}
+.filter button{font-family:inherit; font-size:14px; font-weight:600; color:var(--navy); background:var(--bg); border:1.5px solid transparent; border-radius:3px; padding:10px 20px; cursor:pointer; transition:all .2s;}
 .filter button:hover{border-color:var(--teal); color:var(--teal-dark);}
 .filter button.on{background:var(--navy); color:#fff;}
 
 /* Producto */
-.prod{padding:100px 0; scroll-margin-top:150px;}
+.prod{padding:88px 0; scroll-margin-top:150px;}
 .prod:nth-of-type(even){background:var(--bg);}
 .prod.hide{display:none;}
 .prod-top{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; margin-bottom:56px;}
 .prod:nth-of-type(even) .prod-top .prod-info{order:2;}
 .tag{display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:16px;}
-.prod h2{font-size:46px; margin-bottom:16px;}
-.lead{font-size:21px; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:14px;}
+.prod h2{font-size:36px; margin-bottom:16px;}
+.lead{font-size:18px; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:14px;}
 .prod-info > p{margin-bottom:26px;}
-.by{display:inline-flex; align-items:center; gap:16px; background:#fff; border:1px solid var(--line); border-radius:100px; padding:10px 22px 10px 12px; margin-bottom:30px; box-shadow:0 4px 14px rgba(7,26,44,.05);}
-.by-logo{height:40px; min-width:84px; padding:0 14px; display:flex; align-items:center; justify-content:center; background:var(--bg); border-radius:100px;}
+.by{display:inline-flex; align-items:center; gap:16px; background:#fff; border:1px solid var(--line); border-radius:3px; padding:8px 20px 8px 8px; margin-bottom:28px;}
+.by-logo{height:40px; min-width:84px; padding:0 14px; display:flex; align-items:center; justify-content:center; background:var(--bg); border-radius:3px;}
 .by-logo img{max-height:24px; max-width:96px; width:auto;}
 .by span{font-size:14px; font-weight:500; color:var(--gray);}
 .by-logo img[alt="DURIT"]{height:26px; width:auto; max-height:none; max-width:none;}
 .evapco-sm{height:30px; width:76px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-36px -22px; background-size:148px 68px;}
-.prod-visual{background:linear-gradient(160deg,#fff,#e7eef3); border-radius:30px; height:420px; display:flex; align-items:center; justify-content:center; padding:36px; box-shadow:var(--shadow); position:relative; overflow:hidden;}
-.prod:nth-of-type(even) .prod-visual{background:linear-gradient(160deg,#fff,#dfe9ef);}
-.prod-visual:before{content:""; position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(closest-side, rgba(23,179,160,.18), transparent);}
+.prod-visual{background:#f2f5f7; border:1px solid var(--line); border-radius:4px; height:400px; display:flex; align-items:center; justify-content:center; padding:36px; position:relative; overflow:hidden;}
+.prod:nth-of-type(even) .prod-visual{background:#fff;}
 .prod-visual img{position:relative; max-height:100%; max-width:100%; object-fit:contain;}
 .prod .prod-visual.photo{padding:0 !important; background-color:#fff !important; background-repeat:no-repeat !important; background-size:178% auto !important; background-position:100% 15% !important;}
 .prod-visual.photo:before{display:none;}
@@ -95,23 +95,18 @@ header{position:fixed; top:0; left:0; right:0; z-index:80; background:rgba(7,26,
 
 .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
 .cards.cards-3{grid-template-columns:repeat(3,1fr);}
-.pcard{display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:22px; padding:28px 26px 24px; transition:transform .3s, box-shadow .3s, border-color .3s;}
-.prod:nth-of-type(even) .pcard{border-color:transparent; box-shadow:0 4px 16px rgba(7,26,44,.05);}
-.pcard:hover{transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:transparent;}
+.pcard{display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:4px; border-top:3px solid var(--teal); padding:26px 24px 22px;}
+
 .pcard h4{font-size:19px; line-height:1.2; margin-bottom:10px;}
 .pcard p{font-size:14.5px; line-height:1.55; margin-bottom:18px;}
-.tags{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:22px;}
-.tags span{font-size:12px; font-weight:600; color:var(--teal-dark); background:var(--mint); border-radius:100px; padding:5px 11px;}
-.pcard .go{margin-top:auto; font-size:14.5px; font-weight:700; color:var(--navy); display:inline-flex; gap:8px; align-items:center;}
-.pcard .go:after{content:"→"; color:var(--teal-dark); transition:transform .25s;}
-.pcard:hover .go:after{transform:translateX(6px);}
+.tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto;}
+.tags span{font-size:12px; font-weight:600; color:var(--teal-dark); background:var(--mint); border-radius:3px; padding:4px 10px;}
 
 /* CTA */
-.cta{position:relative; overflow:hidden; background:linear-gradient(120deg,var(--navy),var(--navy-2));}
-.cta:before{content:""; position:absolute; right:-10%; top:-60%; width:55%; height:220%; background:radial-gradient(closest-side, rgba(23,179,160,.28), transparent);}
+.cta{position:relative; overflow:hidden; background:var(--navy);}
 .cta .container{position:relative; padding-top:90px; padding-bottom:90px; display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap;}
-.cta h2{color:#fff; font-size:42px; max-width:680px; margin-bottom:14px;}
-.cta p{color:#b9cbd8; font-size:18px; max-width:620px;}
+.cta h2{color:#fff; font-size:34px; max-width:680px; margin-bottom:14px;}
+.cta p{color:#b9cbd8; font-size:17px; max-width:620px;}
 
 /* Footer */
 footer{background:var(--navy); color:#9fb3c2; padding:72px 0 30px;}
@@ -124,7 +119,7 @@ footer li a{display:block; font-size:15px; padding:5px 0; color:#9fb3c2; transit
 footer li a:hover{color:#fff;}
 .footer-bottom{padding-top:26px; font-size:13.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
 
-.js .reveal{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease;}
+.js .reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease;}
 .js .reveal.in{opacity:1; transform:none;}
 .js .d1{transition-delay:.1s;} .js .d2{transition-delay:.2s;} .js .d3{transition-delay:.3s;}
 @media (prefers-reduced-motion: reduce){ .js .reveal{opacity:1; transform:none; transition:none;} html{scroll-behavior:auto;} }
@@ -135,7 +130,7 @@ footer li a:hover{color:#fff;}
 .nav-links.open{transform:translateY(0);}
 .menu-toggle{display:block;}
 .page-hero{padding:130px 0 60px;}
-.page-hero h1{font-size:38px;}
+.page-hero h1{font-size:32px;}
 .page-hero p{font-size:17px;}
 .filter{position:static;}
 .prod{padding:64px 0;}
@@ -162,7 +157,7 @@ footer li a:hover{color:#fff;}
 <a href="index.html#areas">Áreas de negocio</a>
 <a href="productos.html" class="active">Productos</a>
 <a href="index.html#industrias">Industrias</a>
-<a href="index.html#contacto" class="nav-cta">Cotizar</a>
+<a href="index.html#contacto" class="nav-cta">Contacto</a>
 </nav>
 <button class="menu-toggle" id="menuToggle" aria-label="Menú">&#9776;</button>
 </div>
@@ -170,9 +165,9 @@ footer li a:hover{color:#fff;}
 
 <div class="page-hero">
 <div class="container">
-<span class="kicker">Productos</span>
-<h1>Equipos de clase mundial para cada etapa de su proceso</h1>
-<p>Calderas, enfriamiento, hidrógeno verde, tratamiento de lodos, análisis de gases y protección contra el desgaste, de la mano de los fabricantes líderes en cada especialidad.</p>
+<span class="kicker">Líneas de producto</span>
+<h1>Equipos y sistemas para aplicaciones industriales</h1>
+<p>Líneas de producto de los fabricantes que representamos en Chile, con ingeniería de aplicación, soporte técnico y respaldo comercial de PRETEC.</p>
 </div>
 </div>
 
@@ -192,38 +187,34 @@ footer li a:hover{color:#fff;}
 <div class="prod-info reveal">
 <span class="tag">Soluciones Energéticas</span>
 <h2>Calderas industriales</h2>
-<div class="lead">Vapor y agua caliente a la medida de su planta.</div>
-<p>Calderas pirotubulares y acuotubulares construidas bajo pedido y con repuestos de fácil abastecimiento para que su operación no se detenga.</p>
+<div class="lead">Generación de vapor y agua caliente para procesos industriales.</div>
+<p>Calderas pirotubulares y acuotubulares fabricadas según especificación del proyecto, con suministro de repuestos y servicio técnico.</p>
 <div class="by"><div class="by-logo"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></div><span>Fabricante estadounidense · desde 1917</span></div><br>
-<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20calderas%20industriales">Cotizar calderas</a>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Solicitud%20de%20informaci%C3%B3n%20t%C3%A9cnica%20-%20calderas%20industriales">Solicitar información técnica</a>
 </div>
 <div class="prod-visual reveal d1"><img src="https://www.superiorboiler.com/app/uploads/2024/04/Dakota.png" alt="Caldera industrial Superior Boiler"></div>
 </div>
 <div class="cards">
-<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20calderas%20Scotch%20Marine">
+<div class="pcard reveal">
 <h4>Calderas pirotubulares Scotch Marine</h4>
 <p>Compactas, de tubos de humo, en configuración wetback o dryback.</p>
 <div class="tags"><span>Vapor de proceso</span><span>Calefacción</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20calderas%20acuotubulares">
+</div>
+<div class="pcard reveal d1">
 <h4>Calderas acuotubulares D, DS, O y A</h4>
 <p>Mayores presiones y capacidades, incluyendo HRSG de recuperación de calor.</p>
 <div class="tags"><span>Alta capacidad</span><span>Cogeneración</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20calderas%20condensadoras">
+</div>
+<div class="pcard reveal d2">
 <h4>Condensadoras y verticales</h4>
 <p>Serie Cheyenne de alta eficiencia y calderas verticales de poco espacio.</p>
 <div class="tags"><span>Eficiencia</span><span>Poco espacio</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20paquetes%20modulares%20y%20repuestos">
+</div>
+<div class="pcard reveal d3">
 <h4>Paquetes modulares y postventa</h4>
-<p>Sistemas tipo skid, equipos de sala de calderas, repuestos y servicio.</p>
-<div class="tags"><span>Instalación rápida</span><span>Repuestos</span></div>
-<span class="go">Cotizar</span>
-</a>
+<p>Sistemas tipo skid, equipos de sala de calderas, repuestos y servicio técnico.</p>
+<div class="tags"><span>Montaje simplificado</span><span>Repuestos</span></div>
+</div>
 </div>
 </div>
 </section>
@@ -234,38 +225,34 @@ footer li a:hover{color:#fff;}
 <div class="prod-info reveal">
 <span class="tag">Soluciones Energéticas</span>
 <h2>Torres de enfriamiento y refrigeración</h2>
-<div class="lead">Enfríe sus procesos con eficiencia y confiabilidad.</div>
+<div class="lead">Enfriamiento evaporativo para procesos y sistemas de refrigeración.</div>
 <p>Torres de enfriamiento, enfriadores de circuito cerrado y condensadores evaporativos para plantas industriales y sistemas de refrigeración.</p>
 <div class="by"><div class="by-logo"><div class="evapco-sm" role="img" aria-label="Evapco"></div></div><span>Líder mundial en enfriamiento evaporativo</span></div><br>
-<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20torres%20de%20enfriamiento">Cotizar enfriamiento</a>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Solicitud%20de%20informaci%C3%B3n%20t%C3%A9cnica%20-%20torres%20de%20enfriamiento">Solicitar información técnica</a>
 </div>
 <div class="prod-visual reveal d1"><img src="https://www.evapco.com/sites/evapco.com/files/styles/primary_image_teaser_med/public/images/2019-11/At-atlas-new-sq_0.png" alt="Torre de enfriamiento Evapco Atlas"></div>
 </div>
 <div class="cards">
-<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20torres%20de%20enfriamiento">
+<div class="pcard reveal">
 <h4>Torres de enfriamiento</h4>
 <p>Tiro inducido y forzado: Atlas, AT, LSTE, LPT y AXS.</p>
 <div class="tags"><span>Procesos</span><span>Condensación</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20enfriadores%20de%20circuito%20cerrado">
+</div>
+<div class="pcard reveal d1">
 <h4>Circuito cerrado y condensadores evaporativos</h4>
-<p>Enfrían o condensan en circuito cerrado, cuidando la pureza del fluido.</p>
+<p>Enfriamiento o condensación en circuito cerrado, preservando la pureza del fluido.</p>
 <div class="tags"><span>Fluidos limpios</span><span>Refrigeración</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20refrigeraci%C3%B3n%20industrial">
+</div>
+<div class="pcard reveal d2">
 <h4>Refrigeración industrial</h4>
 <p>Evaporadores y recipientes a presión (RVS) para sistemas de frío.</p>
 <div class="tags"><span>Cámaras de frío</span><span>Alimentos</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20tratamiento%20de%20agua">
+</div>
+<div class="pcard reveal d3">
 <h4>Tratamiento de agua</h4>
-<p>Sistemas que protegen la eficiencia y la vida útil de sus torres.</p>
+<p>Sistemas orientados a proteger la eficiencia y la vida útil de las torres.</p>
 <div class="tags"><span>Incrustación</span><span>Corrosión</span></div>
-<span class="go">Cotizar</span>
-</a>
+</div>
 </div>
 </div>
 </section>
@@ -276,38 +263,34 @@ footer li a:hover{color:#fff;}
 <div class="prod-info reveal">
 <span class="tag">Tecnologías de Procesos Industriales</span>
 <h2>Deshidratación de lodos y RILes</h2>
-<div class="lead">Reduzca el volumen de sus lodos y simplifique su tratamiento.</div>
-<p>Prensas rotativas y de filtro, dosificación de polímero y unidades móviles de arriendo para lodos municipales e industriales.</p>
+<div class="lead">Reducción de volumen y manejo de lodos municipales e industriales.</div>
+<p>Prensas rotativas y de filtro, sistemas de dosificación de polímero y unidades móviles para pruebas en planta.</p>
 <div class="by"><div class="by-logo"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></div><span>Fabricante canadiense · Quebec</span></div><br>
-<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20deshidrataci%C3%B3n%20de%20lodos">Cotizar equipos</a>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Solicitud%20de%20informaci%C3%B3n%20t%C3%A9cnica%20-%20deshidrataci%C3%B3n%20de%20lodos">Solicitar información técnica</a>
 </div>
 <div class="prod-visual reveal d1"><img src="assets/fournier-rotary-press.png" alt="Prensa rotativa Fournier Industries"></div>
 </div>
 <div class="cards">
-<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20prensa%20rotativa">
+<div class="pcard reveal">
 <h4>Prensa rotativa</h4>
 <p>Deshidratación modular, silenciosa y de bajo consumo de energía.</p>
 <div class="tags"><span>Municipal</span><span>Industrial</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20prensa%20de%20filtro">
+</div>
+<div class="pcard reveal d1">
 <h4>Prensa de filtro automática</h4>
 <p>Para lodos abrasivos o corrosivos, con operación totalmente automática.</p>
 <div class="tags"><span>Lodos difíciles</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Consulta%20Polysys%20y%20unidades%20m%C3%B3viles">
+</div>
+<div class="pcard reveal d2">
 <h4>Polysys y unidades móviles</h4>
-<p>Dosificación de polímero y equipos móviles disponibles en arriendo.</p>
-<div class="tags"><span>Arriendo</span><span>Pruebas en planta</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Consulta%20manejo%20de%20s%C3%B3lidos">
+<p>Dosificación de polímero y equipos móviles para ensayos en planta.</p>
+<div class="tags"><span>Ensayos en planta</span></div>
+</div>
+<div class="pcard reveal d3">
 <h4>Manejo de sólidos y análisis de lodos</h4>
 <p>Estanques, silos y tolvas, con caracterización de lodos en laboratorio.</p>
 <div class="tags"><span>Silos</span><span>Laboratorio</span></div>
-<span class="go">Consultar</span>
-</a>
+</div>
 </div>
 </div>
 </section>
@@ -318,38 +301,34 @@ footer li a:hover{color:#fff;}
 <div class="prod-info reveal">
 <span class="tag">Tecnologías de Procesos Industriales</span>
 <h2>Cromatografía y análisis de gases</h2>
-<div class="lead">Mida lo que importa, hasta nivel de partes por billón.</div>
-<p>Cromatógrafos y analizadores en línea para controlar la composición y las impurezas de los gases de su proceso con máxima precisión.</p>
+<div class="lead">Análisis de gases de proceso con detección a nivel de trazas (ppb).</div>
+<p>Cromatógrafos y analizadores en línea para el control de composición e impurezas en gases de proceso.</p>
 <div class="by"><div class="by-logo"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></div><span>Fabricante belga · más de 50 años</span></div><br>
-<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20an%C3%A1lisis%20de%20gases">Cotizar analizadores</a>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Solicitud%20de%20informaci%C3%B3n%20t%C3%A9cnica%20-%20an%C3%A1lisis%20de%20gases">Solicitar información técnica</a>
 </div>
 <div class="prod-visual reveal d1"><img src="https://www.orthodyne.be/wp-content/uploads/2017/02/orthosmart-gas-chromatograph.png" alt="Cromatógrafo de gases Orthodyne"></div>
 </div>
 <div class="cards">
-<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20cromat%C3%B3grafos%20de%20gases">
+<div class="pcard reveal">
 <h4>Cromatógrafos de gases</h4>
 <p>OrthoSmart, DID y OrthoPure para análisis de trazas a nivel ppb.</p>
 <div class="tags"><span>Alta pureza</span><span>Laboratorio</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Cotizaci%C3%B3n%20analizadores%20en%20l%C3%ADnea">
+</div>
+<div class="pcard reveal d1">
 <h4>Analizadores en línea</h4>
 <p>Infrarrojo, oxígeno y nitrógeno traza para monitoreo continuo.</p>
 <div class="tags"><span>Monitoreo continuo</span></div>
-<span class="go">Cotizar</span>
-</a>
-<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Consulta%20aplicaciones%20analizadores">
+</div>
+<div class="pcard reveal d2">
 <h4>Soluciones por industria</h4>
 <p>Separación de aire, llenado de cilindros, alimentos, gases medicinales y semiconductores.</p>
 <div class="tags"><span>Gases industriales</span><span>Salud</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Consulta%20integraci%C3%B3n%20de%20sistemas">
+</div>
+<div class="pcard reveal d3">
 <h4>Integración y software</h4>
 <p>Sistemas completos con software propio de control.</p>
 <div class="tags"><span>Automatización</span></div>
-<span class="go">Consultar</span>
-</a>
+</div>
 </div>
 </div>
 </section>
@@ -360,32 +339,29 @@ footer li a:hover{color:#fff;}
 <div class="prod-info reveal">
 <span class="tag">Tecnologías de Procesos Industriales</span>
 <h2>Protección contra el desgaste y metal duro</h2>
-<div class="lead">Alargue la vida útil de sus componentes más exigidos.</div>
-<p>Componentes de metal duro (carburo de tungsteno) para las piezas que más sufren el desgaste en su proceso, con menos paradas y menos reposiciones.</p>
+<div class="lead">Componentes de metal duro para aplicaciones de alto desgaste.</div>
+<p>Componentes de metal duro (carburo de tungsteno) para piezas sometidas a desgaste abrasivo, erosivo o corrosivo, orientados a reducir paradas y reposiciones.</p>
 <div class="by"><div class="by-logo"><img src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></div><span>Fabricante alemán · producción en Portugal</span></div><br>
-<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Consulta%20metal%20duro%20DURIT">Consultar soluciones</a>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Solicitud%20de%20informaci%C3%B3n%20t%C3%A9cnica%20-%20metal%20duro%20DURIT">Solicitar información técnica</a>
 </div>
 <div class="prod-visual photo reveal d1" role="img" aria-label="Cuchillas y piezas de metal duro DURIT" style="background-image:url('https://www.durit.com/fileadmin/user_upload/products/carbide/cutting-tools/en/0-cutting-tools-durit.jpg');"></div>
 </div>
 <div class="cards cards-3">
-<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Consulta%20componentes%20para%20bombas%20y%20v%C3%A1lvulas%20-%20DURIT">
+<div class="pcard reveal">
 <h4>Bombas, válvulas y compresores</h4>
-<p>Conos, asientos, jaulas y émbolos de metal duro que aumentan la vida útil.</p>
+<p>Conos, asientos, jaulas y émbolos de metal duro para mayor vida útil del componente.</p>
 <div class="tags"><span>Válvulas</span><span>Bombas</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Consulta%20piezas%20de%20desgaste%20molienda%20-%20DURIT">
+</div>
+<div class="pcard reveal d1">
 <h4>Trituración, molienda y reciclaje</h4>
 <p>Piezas de desgaste para equipos de molienda, peletizado y reciclaje.</p>
 <div class="tags"><span>Molienda</span><span>Reciclaje</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Consulta%20transporte%2C%20mezcla%20y%20extrusi%C3%B3n%20-%20DURIT">
+</div>
+<div class="pcard reveal d2">
 <h4>Transporte, mezcla y extrusión</h4>
 <p>Componentes resistentes para tornillos extrusores y sistemas de transporte.</p>
 <div class="tags"><span>Extrusión</span><span>Mezcla</span></div>
-<span class="go">Consultar</span>
-</a>
+</div>
 </div>
 </div>
 </section>
@@ -396,38 +372,34 @@ footer li a:hover{color:#fff;}
 <div class="prod-info reveal">
 <span class="tag">Nuevas Energías e Hidrógeno Verde</span>
 <h2>Hidrógeno verde y energía sin emisiones</h2>
-<div class="lead">La tecnología que impulsa la descarbonización industrial.</div>
-<p>Celdas, stacks y módulos de óxido sólido para producir hidrógeno mediante electrólisis y generar energía eléctrica con alta eficiencia y sin emisiones.</p>
+<div class="lead">Electrólisis y generación eléctrica con celdas de óxido sólido.</div>
+<p>Celdas, stacks y módulos de óxido sólido para producción de hidrógeno por electrólisis y generación eléctrica de alta eficiencia.</p>
 <div class="by"><div class="by-logo"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></div><span>Fabricante europeo · Estonia y Finlandia</span></div><br>
-<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Consulta%20hidr%C3%B3geno%20verde">Consultar proyecto</a>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Solicitud%20de%20informaci%C3%B3n%20t%C3%A9cnica%20-%20hidr%C3%B3geno%20verde">Solicitar información técnica</a>
 </div>
 <div class="prod-visual reveal d1"><img src="assets/elcogen-2x2-module.png" alt="Módulo elcoModule 2x2 Elcogen"></div>
 </div>
 <div class="cards">
-<a class="pcard reveal" href="mailto:contacto@pretec.cl?subject=Consulta%20celdas%20y%20stacks">
+<div class="pcard reveal">
 <h4>Celdas y stacks SOFC / SOEC</h4>
 <p>Celdas reversibles: operan como celda de combustible o como electrolizador.</p>
 <div class="tags"><span>Hidrógeno</span><span>Energía</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d1" href="mailto:contacto@pretec.cl?subject=Consulta%20m%C3%B3dulos%20elcoModule">
+</div>
+<div class="pcard reveal d1">
 <h4>Módulos elcoModule</h4>
 <p>Stacks agrupados para integrarse en sistemas de mayor escala.</p>
 <div class="tags"><span>Integradores</span><span>Proyectos</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d2" href="mailto:contacto@pretec.cl?subject=Consulta%20Power-to-X">
+</div>
+<div class="pcard reveal d2">
 <h4>Power-to-X y gas-to-power</h4>
 <p>Electrólisis para combustibles sintéticos y generación a partir de gas.</p>
 <div class="tags"><span>Descarbonización</span></div>
-<span class="go">Consultar</span>
-</a>
-<a class="pcard reveal d3" href="mailto:contacto@pretec.cl?subject=Consulta%20sector%20mar%C3%ADtimo">
+</div>
+<div class="pcard reveal d3">
 <h4>Sector marítimo</h4>
-<p>Energía sin emisiones para aplicaciones a bordo de embarcaciones.</p>
+<p>Generación de energía sin emisiones para aplicaciones a bordo de embarcaciones.</p>
 <div class="tags"><span>Propulsión</span><span>Energía auxiliar</span></div>
-<span class="go">Consultar</span>
-</a>
+</div>
 </div>
 </div>
 </section>
@@ -435,10 +407,10 @@ footer li a:hover{color:#fff;}
 <section class="cta">
 <div class="container">
 <div>
-<h2>¿No encuentra lo que busca?</h2>
-<p>Cuéntenos su proceso y le ayudamos a especificar el equipo adecuado, o a conseguir el repuesto que necesita.</p>
+<h2>Consultas técnicas y comerciales</h2>
+<p>Describa su aplicación y nuestro equipo evaluará la solución adecuada junto al fabricante, incluyendo repuestos y servicio.</p>
 </div>
-<a href="index.html#contacto" class="btn btn-primary">Solicitar una cotización</a>
+<a href="index.html#contacto" class="btn btn-primary">Solicitar propuesta técnico-comercial</a>
 </div>
 </section>
 
@@ -447,7 +419,7 @@ footer li a:hover{color:#fff;}
 <div class="footer-top">
 <div>
 <div class="footer-logo"><img src="https://static.wixstatic.com/media/7ecf4c_56aa6e17863a4255be07e021bb18e43b~mv2.png" alt="Pretec">PRETEC</div>
-<p>Ingeniería y representaciones para una industria más eficiente y sustentable.</p>
+<p>Ingeniería, soporte técnico y representaciones industriales en Chile.</p>
 </div>
 <div>
 <h4>Navegación</h4>
