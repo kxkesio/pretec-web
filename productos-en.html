@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product lines | PRETEC Ingeniería</title>
+<meta name="description" content="Product lines from the manufacturers represented by PRETEC Ingeniería: industrial boilers, cooling towers, sludge dewatering, gas analysis, tungsten carbide parts and green hydrogen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+--navy:#071a2c;
+--navy-2:#0c2a45;
+--ink:#0f1d2a;
+--gray:#5b6b78;
+--teal:#0e8f80;
+--teal-dark:#0b7569;
+--mint:#e3f6f3;
+--bg:#f4f7f9;
+--line:#e4eaee;
+--white:#fff;
+--shadow:0 10px 30px rgba(7,26,44,.08);
+--shadow-lg:0 24px 60px rgba(7,26,44,.16);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter','Segoe UI',Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.6; background:#fff; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+.container{max-width:1200px; margin:0 auto; padding:0 28px;}
+h1,h2,h3,h4{font-weight:800; letter-spacing:-0.025em; color:var(--navy); line-height:1.1;}
+p{color:var(--gray); font-size:16.5px;}
+.kicker{display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); padding:0 0 0 38px; position:relative; margin-bottom:20px;}
+.kicker:before{content:""; position:absolute; left:0; top:50%; width:26px; height:2px; background:var(--teal);}
+.btn{display:inline-flex; align-items:center; gap:10px; padding:14px 26px; border-radius:3px; font-weight:600; font-size:14.5px; transition:background .2s; border:1.5px solid transparent; cursor:pointer; font-family:inherit;}
+.btn-primary{background:var(--teal); color:#fff;}
+.btn-primary:hover{background:var(--teal-dark);}
+.btn-dark{background:var(--navy); color:#fff;}
+.btn-dark:hover{background:var(--navy-2);}
+
+/* Header */
+header{position:fixed; top:0; left:0; right:0; z-index:80; background:#071a2c;}
+.nav{display:flex; align-items:center; justify-content:space-between; height:94px;}
+.nav-logo{display:flex; align-items:center; gap:12px;}
+.nav-logo img{height:62px; width:auto;}
+.nav-logo span{color:#fff; font-weight:800; font-size:29px; letter-spacing:.1em;}
+.nav-links{display:flex; align-items:center; gap:36px;}
+.nav-links a{color:#d6e2ea; font-size:14.5px; font-weight:500; transition:color .2s;}
+.nav-links a:hover, .nav-links a.active{color:#fff;}
+.nav-cta{border:1px solid rgba(255,255,255,.5); color:#fff !important; padding:10px 22px; border-radius:3px; font-weight:600 !important;}
+.nav-cta:hover{background:#fff; color:var(--navy) !important;}
+.nav-links a.lang{font-weight:700; letter-spacing:.08em; font-size:13px; border:1px solid rgba(255,255,255,.35); padding:6px 11px; border-radius:3px;}
+.nav-links a.lang:hover{background:rgba(255,255,255,.12);}
+.menu-toggle{display:none; color:#fff; font-size:28px; background:none; border:none; cursor:pointer;}
+
+/* Hero */
+.page-hero{position:relative; padding:170px 0 90px; color:#fff; background:var(--navy) url('assets/que-hacemos-transporte.jpg') center 45%/cover; overflow:hidden;}
+.page-hero:before{content:""; position:absolute; inset:0; background:linear-gradient(105deg, rgba(7,26,44,.97) 0%, rgba(7,26,44,.9) 55%, rgba(7,26,44,.65) 100%);}
+.page-hero .container{position:relative; z-index:2;}
+.page-hero .kicker{color:#8fe7da;}
+.page-hero .kicker:before{background:#8fe7da;}
+.page-hero h1{color:#fff; font-size:46px; max-width:760px; margin-bottom:20px;}
+.page-hero p{color:#cfdce6; font-size:18px; max-width:680px;}
+
+/* Filtro */
+.filter{position:sticky; top:94px; z-index:50; background:#fff; border-bottom:1px solid var(--line);}
+.filter .container{display:flex; align-items:center; gap:10px; flex-wrap:wrap; padding-top:16px; padding-bottom:16px;}
+.filter button{font-family:inherit; font-size:14px; font-weight:600; color:var(--navy); background:var(--bg); border:1.5px solid transparent; border-radius:3px; padding:10px 20px; cursor:pointer; transition:all .2s;}
+.filter button:hover{border-color:var(--teal); color:var(--teal-dark);}
+.filter button.on{background:var(--navy); color:#fff;}
+
+/* Producto */
+.prod{padding:88px 0; scroll-margin-top:150px;}
+.prod:nth-of-type(even){background:var(--bg);}
+.prod.hide{display:none;}
+.prod-top{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; margin-bottom:56px;}
+.prod:nth-of-type(even) .prod-top .prod-info{order:2;}
+.tag{display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:16px;}
+.prod h2{font-size:36px; margin-bottom:16px;}
+.lead{font-size:18px; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:14px;}
+.prod-info > p{margin-bottom:26px;}
+.by{display:inline-flex; align-items:center; gap:16px; background:#fff; border:1px solid var(--line); border-radius:3px; padding:8px 20px 8px 8px; margin-bottom:28px;}
+.by-logo{height:40px; min-width:84px; padding:0 14px; display:flex; align-items:center; justify-content:center; background:var(--bg); border-radius:3px;}
+.by-logo img{max-height:24px; max-width:96px; width:auto;}
+.by span{font-size:14px; font-weight:500; color:var(--gray);}
+.by-logo img[alt="DURIT"]{height:26px; width:auto; max-height:none; max-width:none;}
+.evapco-sm{height:30px; width:76px; background:url('https://static.wixstatic.com/media/7ecf4c_1988f1c544d447f5916e2d01dbbac563~mv2.png') no-repeat; background-position:-36px -22px; background-size:148px 68px;}
+.prod-visual{background:#f2f5f7; border:1px solid var(--line); border-radius:4px; height:400px; display:flex; align-items:center; justify-content:center; padding:36px; position:relative; overflow:hidden;}
+.prod:nth-of-type(even) .prod-visual{background:#fff;}
+.prod-visual img{position:relative; max-height:100%; max-width:100%; object-fit:contain;}
+.prod .prod-visual.photo{padding:0 !important; background-color:#fff !important; background-repeat:no-repeat !important; background-size:178% auto !important; background-position:100% 15% !important;}
+.prod-visual.photo:before{display:none;}
+.prod-visual img.logo-visual{width:62%; max-width:62%; height:auto; max-height:none;}
+
+.cards{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+.cards.cards-3{grid-template-columns:repeat(3,1fr);}
+.pcard{display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:4px; border-top:3px solid var(--teal); padding:26px 24px 22px;}
+
+.pcard h4{font-size:19px; line-height:1.2; margin-bottom:10px;}
+.pcard p{font-size:14.5px; line-height:1.55; margin-bottom:18px;}
+.tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto;}
+.tags span{font-size:12px; font-weight:600; color:var(--teal-dark); background:var(--mint); border-radius:3px; padding:4px 10px;}
+
+/* CTA */
+.cta{position:relative; overflow:hidden; background:var(--navy);}
+.cta .container{position:relative; padding-top:90px; padding-bottom:90px; display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap;}
+.cta h2{color:#fff; font-size:34px; max-width:680px; margin-bottom:14px;}
+.cta p{color:#b9cbd8; font-size:17px; max-width:620px;}
+
+/* Footer */
+footer{background:var(--navy); color:#9fb3c2; padding:72px 0 30px;}
+.footer-top{display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:48px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,.1);}
+.footer-logo{display:flex; align-items:center; gap:12px; color:#fff; font-weight:800; font-size:19px; letter-spacing:.1em;}
+.footer-logo img{height:54px;}
+footer p{color:#9fb3c2; font-size:15px; max-width:340px; margin-top:18px;}
+footer h4{color:#fff; font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:18px;}
+footer li a{display:block; font-size:15px; padding:5px 0; color:#9fb3c2; transition:color .2s;}
+footer li a:hover{color:#fff;}
+.footer-bottom{padding-top:26px; font-size:13.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+.js .reveal{opacity:0; transform:translateY(12px); transition:opacity .6s ease, transform .6s ease;}
+.js .reveal.in{opacity:1; transform:none;}
+.js .d1{transition-delay:.1s;} .js .d2{transition-delay:.2s;} .js .d3{transition-delay:.3s;}
+@media (prefers-reduced-motion: reduce){ .js .reveal{opacity:1; transform:none; transition:none;} html{scroll-behavior:auto;} }
+
+@media (max-width: 1080px){ .cards{grid-template-columns:repeat(2,1fr);} }
+@media (max-width: 960px){
+.nav-links{position:fixed; top:94px; left:0; right:0; background:var(--navy); flex-direction:column; align-items:flex-start; padding:24px 28px 30px; gap:20px; transform:translateY(-140%); transition:transform .3s ease;}
+.nav-links.open{transform:translateY(0);}
+.menu-toggle{display:block;}
+.page-hero{padding:130px 0 60px;}
+.page-hero h1{font-size:32px;}
+.page-hero p{font-size:17px;}
+.filter{position:static;}
+.prod{padding:64px 0;}
+.prod-top{grid-template-columns:1fr; gap:34px;}
+.prod:nth-of-type(even) .prod-top .prod-info{order:0;}
+.prod-visual{height:280px; order:-1;}
+.prod h2{font-size:34px;}
+.cards{grid-template-columns:1fr;}
+.cta h2{font-size:30px;}
+.footer-top{grid-template-columns:1fr; gap:34px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+<a class="nav-logo" href="index-en.html">
+<img src="https://static.wixstatic.com/media/7ecf4c_56aa6e17863a4255be07e021bb18e43b~mv2.png" alt="Pretec">
+<span>PRETEC</span>
+</a>
+<nav class="nav-links" id="navLinks">
+<a href="index-en.html#nosotros">About us</a>
+<a href="index-en.html#areas">Business areas</a>
+<a href="productos-en.html" class="active">Products</a>
+<a href="index-en.html#industrias">Industries</a>
+<a href="index-en.html#contacto" class="nav-cta">Contact</a>
+<a href="productos.html" class="lang" id="langSwitch" hreflang="es" title="Español">ES</a>
+</nav>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+</div>
+</header>
+
+<div class="page-hero">
+<div class="container">
+<span class="kicker">Product lines</span>
+<h1>Equipment and systems for industrial applications</h1>
+<p>Product lines from the manufacturers we represent in Chile, with PRETEC application engineering, technical support and commercial backing.</p>
+</div>
+</div>
+
+<div class="filter">
+<div class="container">
+<button type="button" class="on" data-filter="todas">All</button>
+<button type="button" data-filter="soluciones-energeticas">Energy Solutions</button>
+<button type="button" data-filter="procesos-industriales">Industrial Process Technologies</button>
+<button type="button" data-filter="nuevas-energias">New Energies and Green Hydrogen</button>
+</div>
+</div>
+
+<!-- CALDERAS -->
+<section class="prod" id="superior-boiler" data-area="soluciones-energeticas">
+<div class="container">
+<div class="prod-top">
+<div class="prod-info reveal">
+<span class="tag">Energy Solutions</span>
+<h2>Industrial boilers</h2>
+<div class="lead">Steam and hot water generation for industrial processes.</div>
+<p>Fire-tube and water-tube boilers built to project specification, with spare parts supply and technical service.</p>
+<div class="by"><div class="by-logo"><img src="https://static.wixstatic.com/media/7ecf4c_d6b9dd4aee4b43e1b38bde6a709f30b6~mv2.png" alt="Superior Boiler"></div><span>U.S. manufacturer · since 1917</span></div><br>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Technical%20information%20request%20-%20industrial%20boilers">Request technical information</a>
+</div>
+<div class="prod-visual reveal d1"><img src="https://www.superiorboiler.com/app/uploads/2024/04/Dakota.png" alt="Superior Boiler industrial boiler"></div>
+</div>
+<div class="cards">
+<div class="pcard reveal">
+<h4>Scotch Marine fire-tube boilers</h4>
+<p>Compact fire-tube design in wetback or dryback configuration.</p>
+<div class="tags"><span>Process steam</span><span>Heating</span></div>
+</div>
+<div class="pcard reveal d1">
+<h4>D, DS, O and A water-tube boilers</h4>
+<p>Higher pressures and capacities, including heat recovery steam generators (HRSG).</p>
+<div class="tags"><span>High capacity</span><span>Cogeneration</span></div>
+</div>
+<div class="pcard reveal d2">
+<h4>Condensing and vertical boilers</h4>
+<p>High-efficiency Cheyenne series and space-saving vertical boilers.</p>
+<div class="tags"><span>Efficiency</span><span>Small footprint</span></div>
+</div>
+<div class="pcard reveal d3">
+<h4>Modular packages and after-sales</h4>
+<p>Skid-mounted systems, boiler room equipment, spare parts and technical service.</p>
+<div class="tags"><span>Simplified installation</span><span>Spare parts</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ENFRIAMIENTO -->
+<section class="prod" id="evapco" data-area="soluciones-energeticas">
+<div class="container">
+<div class="prod-top">
+<div class="prod-info reveal">
+<span class="tag">Energy Solutions</span>
+<h2>Cooling towers and refrigeration</h2>
+<div class="lead">Evaporative cooling for processes and refrigeration systems.</div>
+<p>Cooling towers, closed-circuit coolers and evaporative condensers for industrial plants and refrigeration systems.</p>
+<div class="by"><div class="by-logo"><div class="evapco-sm" role="img" aria-label="Evapco"></div></div><span>Global leader in evaporative cooling</span></div><br>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Technical%20information%20request%20-%20cooling%20towers">Request technical information</a>
+</div>
+<div class="prod-visual reveal d1"><img src="https://www.evapco.com/sites/evapco.com/files/styles/primary_image_teaser_med/public/images/2019-11/At-atlas-new-sq_0.png" alt="Evapco Atlas cooling tower"></div>
+</div>
+<div class="cards">
+<div class="pcard reveal">
+<h4>Cooling towers</h4>
+<p>Induced and forced draft: Atlas, AT, LSTE, LPT and AXS.</p>
+<div class="tags"><span>Processes</span><span>Condensation</span></div>
+</div>
+<div class="pcard reveal d1">
+<h4>Closed circuit and evaporative condensers</h4>
+<p>Closed-circuit cooling or condensation, preserving fluid purity.</p>
+<div class="tags"><span>Clean fluids</span><span>Refrigeration</span></div>
+</div>
+<div class="pcard reveal d2">
+<h4>Industrial refrigeration</h4>
+<p>Evaporators and pressure vessels (RVS) for refrigeration systems.</p>
+<div class="tags"><span>Cold storage</span><span>Food</span></div>
+</div>
+<div class="pcard reveal d3">
+<h4>Water treatment</h4>
+<p>Systems designed to protect the efficiency and service life of the towers.</p>
+<div class="tags"><span>Scaling</span><span>Corrosion</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- LODOS -->
+<section class="prod" id="fournier-industries" data-area="procesos-industriales">
+<div class="container">
+<div class="prod-top">
+<div class="prod-info reveal">
+<span class="tag">Industrial Process Technologies</span>
+<h2>Sludge and industrial wastewater dewatering</h2>
+<div class="lead">Volume reduction and handling of municipal and industrial sludge.</div>
+<p>Rotary and filter presses, polymer dosing systems and mobile units for on-site trials.</p>
+<div class="by"><div class="by-logo"><img src="https://fournierindustries.com/wp-content/themes/understrap-child/images/logo.svg" alt="Fournier Industries"></div><span>Canadian manufacturer · Quebec</span></div><br>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Technical%20information%20request%20-%20sludge%20dewatering">Request technical information</a>
+</div>
+<div class="prod-visual reveal d1"><img src="assets/fournier-rotary-press.png" alt="Fournier Industries rotary press"></div>
+</div>
+<div class="cards">
+<div class="pcard reveal">
+<h4>Rotary press</h4>
+<p>Modular, quiet, low-energy dewatering.</p>
+<div class="tags"><span>Municipal</span><span>Industrial</span></div>
+</div>
+<div class="pcard reveal d1">
+<h4>Automatic filter press</h4>
+<p>For abrasive or corrosive sludge, with fully automatic operation.</p>
+<div class="tags"><span>Difficult sludge</span></div>
+</div>
+<div class="pcard reveal d2">
+<h4>Polysys and mobile units</h4>
+<p>Polymer dosing and mobile equipment for on-site testing.</p>
+<div class="tags"><span>On-site testing</span></div>
+</div>
+<div class="pcard reveal d3">
+<h4>Solids handling and sludge analysis</h4>
+<p>Tanks, silos and hoppers, with laboratory sludge characterization.</p>
+<div class="tags"><span>Silos</span><span>Laboratory</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- GASES -->
+<section class="prod" id="orthodyne" data-area="procesos-industriales">
+<div class="container">
+<div class="prod-top">
+<div class="prod-info reveal">
+<span class="tag">Industrial Process Technologies</span>
+<h2>Chromatography and gas analysis</h2>
+<div class="lead">Process gas analysis with trace-level detection (ppb).</div>
+<p>Chromatographs and online analyzers for composition and impurity control in process gases.</p>
+<div class="by"><div class="by-logo"><img src="https://static.wixstatic.com/media/7ecf4c_8e68eb49a16e4a53aa2bdcd5b1a46ef9~mv2.png" alt="Orthodyne"></div><span>Belgian manufacturer · over 50 years</span></div><br>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Technical%20information%20request%20-%20gas%20analysis">Request technical information</a>
+</div>
+<div class="prod-visual reveal d1"><img src="https://www.orthodyne.be/wp-content/uploads/2017/02/orthosmart-gas-chromatograph.png" alt="Orthodyne gas chromatograph"></div>
+</div>
+<div class="cards">
+<div class="pcard reveal">
+<h4>Gas chromatographs</h4>
+<p>OrthoSmart, DID and OrthoPure for ppb-level trace analysis.</p>
+<div class="tags"><span>High purity</span><span>Laboratory</span></div>
+</div>
+<div class="pcard reveal d1">
+<h4>Online analyzers</h4>
+<p>Infrared, trace oxygen and trace nitrogen for continuous monitoring.</p>
+<div class="tags"><span>Continuous monitoring</span></div>
+</div>
+<div class="pcard reveal d2">
+<h4>Industry solutions</h4>
+<p>Air separation, cylinder filling, food, medical gases and semiconductors.</p>
+<div class="tags"><span>Industrial gases</span><span>Healthcare</span></div>
+</div>
+<div class="pcard reveal d3">
+<h4>Integration and software</h4>
+<p>Complete systems with proprietary control software.</p>
+<div class="tags"><span>Automation</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- DURIT -->
+<section class="prod" id="durit" data-area="procesos-industriales">
+<div class="container">
+<div class="prod-top">
+<div class="prod-info reveal">
+<span class="tag">Industrial Process Technologies</span>
+<h2>Tungsten carbide wear parts</h2>
+<div class="lead">Tungsten carbide parts for high-wear applications.</div>
+<p>Tungsten carbide parts and components for equipment subject to abrasive, erosive or corrosive wear, aimed at reducing downtime and replacements.</p>
+<div class="by"><div class="by-logo"><img src="https://www.durit.com/typo3conf/ext/site/Resources/Public/Images/DURIT-HARTMETALL.svg" alt="DURIT"></div><span>German manufacturer · production in Portugal</span></div><br>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Technical%20information%20request%20-%20tungsten%20carbide%20DURIT">Request technical information</a>
+</div>
+<div class="prod-visual photo reveal d1" role="img" aria-label="DURIT tungsten carbide knives and parts" style="background-image:url('https://www.durit.com/fileadmin/user_upload/products/carbide/cutting-tools/en/0-cutting-tools-durit.jpg');"></div>
+</div>
+<div class="cards cards-3">
+<div class="pcard reveal">
+<h4>Pumps, valves and compressors</h4>
+<p>Tungsten carbide cones, seats, cages and plungers for longer component life.</p>
+<div class="tags"><span>Valves</span><span>Pumps</span></div>
+</div>
+<div class="pcard reveal d1">
+<h4>Crushing, grinding and recycling</h4>
+<p>Wear parts for grinding, pelletizing and recycling equipment.</p>
+<div class="tags"><span>Grinding</span><span>Recycling</span></div>
+</div>
+<div class="pcard reveal d2">
+<h4>Conveying, mixing and extrusion</h4>
+<p>Wear-resistant components for extruder screws and conveying systems.</p>
+<div class="tags"><span>Extrusion</span><span>Mixing</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- HIDROGENO -->
+<section class="prod" id="elcogen" data-area="nuevas-energias">
+<div class="container">
+<div class="prod-top">
+<div class="prod-info reveal">
+<span class="tag">New Energies and Green Hydrogen</span>
+<h2>Green hydrogen and zero-emission energy</h2>
+<div class="lead">Electrolysis and power generation with solid oxide cells.</div>
+<p>Solid oxide cells, stacks and modules for hydrogen production by electrolysis and high-efficiency power generation.</p>
+<div class="by"><div class="by-logo"><img src="https://elcogen.com/wp-content/uploads/2026/01/elcogen-big-logo.svg" alt="Elcogen"></div><span>European manufacturer · Estonia and Finland</span></div><br>
+<a class="btn btn-primary" href="mailto:contacto@pretec.cl?subject=Technical%20information%20request%20-%20green%20hydrogen">Request technical information</a>
+</div>
+<div class="prod-visual reveal d1"><img src="assets/elcogen-2x2-module.png" alt="Elcogen elcoModule 2x2 module"></div>
+</div>
+<div class="cards">
+<div class="pcard reveal">
+<h4>SOFC / SOEC cells and stacks</h4>
+<p>Reversible cells: operate as a fuel cell or as an electrolyzer.</p>
+<div class="tags"><span>Hydrogen</span><span>Energy</span></div>
+</div>
+<div class="pcard reveal d1">
+<h4>elcoModule modules</h4>
+<p>Grouped stacks for integration into larger-scale systems.</p>
+<div class="tags"><span>Integrators</span><span>Projects</span></div>
+</div>
+<div class="pcard reveal d2">
+<h4>Power-to-X and gas-to-power</h4>
+<p>Electrolysis for synthetic fuels and power generation from gas.</p>
+<div class="tags"><span>Decarbonization</span></div>
+</div>
+<div class="pcard reveal d3">
+<h4>Maritime sector</h4>
+<p>Zero-emission power generation for onboard applications.</p>
+<div class="tags"><span>Propulsion</span><span>Auxiliary power</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<div>
+<h2>Technical and commercial inquiries</h2>
+<p>Describe your application and our team will evaluate the right solution together with the manufacturer, including spare parts and service.</p>
+</div>
+<a href="index-en.html#contacto" class="btn btn-primary">Request a technical-commercial proposal</a>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-top">
+<div>
+<div class="footer-logo"><img src="https://static.wixstatic.com/media/7ecf4c_56aa6e17863a4255be07e021bb18e43b~mv2.png" alt="Pretec">PRETEC</div>
+<p>Engineering, technical support and industrial representations in Chile.</p>
+</div>
+<div>
+<h4>Navigation</h4>
+<ul>
+<li><a href="index-en.html#nosotros">About us</a></li>
+<li><a href="index-en.html#areas">Business areas</a></li>
+<li><a href="productos-en.html">Products</a></li>
+<li><a href="index-en.html#industrias">Industries</a></li>
+<li><a href="index-en.html#contacto">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><a href="mailto:contacto@pretec.cl">contacto@pretec.cl</a></li>
+<li><a href="tel:+56226811813">+56 22 681 1813</a></li>
+<li><a href="index-en.html#contacto">Las Condes, Santiago</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© PRETEC Ingeniería SpA — registered trademark.</span>
+<span>Av. Alonso de Córdova 5870, of. 308, Las Condes, Santiago, Chile</span>
+</div>
+</div>
+</footer>
+
+<script>
+document.getElementById('menuToggle').addEventListener('click', function(){
+document.getElementById('navLinks').classList.toggle('open');
+});
+if('IntersectionObserver' in window){
+var io = new IntersectionObserver(function(es){
+es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+} else {
+document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+}
+var areas = ['soluciones-energeticas','procesos-industriales','nuevas-energias'];
+var btns = document.querySelectorAll('.filter button');
+var blocks = document.querySelectorAll('.prod');
+function applyFilter(f){
+btns.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-filter') === f); });
+blocks.forEach(function(s){ s.classList.toggle('hide', f !== 'todas' && s.getAttribute('data-area') !== f); });
+document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+}
+btns.forEach(function(b){
+b.addEventListener('click', function(){
+var f = b.getAttribute('data-filter');
+applyFilter(f);
+history.replaceState(null, '', f === 'todas' ? 'productos-en.html' : '#' + f);
+window.scrollTo({top: document.querySelector('.filter').offsetTop - 78, behavior:'smooth'});
+});
+});
+function fromHash(){
+var h = location.hash.slice(1);
+if(areas.indexOf(h) !== -1){
+applyFilter(h);
+window.scrollTo({top: document.querySelector('.filter').offsetTop - 78});
+} else if(h){
+applyFilter('todas');
+var el = document.getElementById(h);
+if(el) setTimeout(function(){ el.scrollIntoView(); }, 30);
+}
+}
+window.addEventListener('hashchange', fromHash);
+fromHash();
+</script>
+
+<script>
+document.getElementById('langSwitch').addEventListener('click',function(){ this.href=this.getAttribute('href').split('#')[0]+location.hash; });
+</script>
+</body>
+</html>
